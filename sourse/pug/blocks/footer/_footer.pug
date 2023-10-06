@@ -1,9 +1,54 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		+e.top
+		+e.body
+			.container
+				+e.row.row
+					.col.d-none.d-md-block
+						+e.title Заборы
+						ul
+							li: a(href="#") Заборы из профнастила
+							li: a(href="#") Заборы из евроштакетника
+							li: a(href="#") Заборы из сетки рабицы
+							li: a(href="#") Заборы из 3Д сетки
+							li: a(href="#") Заборы жалюзи
+							li: a(href="#") Секционные заборы
+							li: a(href="#") Заборы для дачи
+							li: a(href="#") Заборы для коттеджа
+							li: a(href="#") Заборы для частного дома
+
+					.col.d-none.d-md-block
+						+e.title Столбы
+						ul
+							li: a(href="#") Столбы кирпичные
+							li: a(href="#") Столбы металлические
+					.col.d-none.d-md-block
+						+e.title Ворота
+						ul
+							li: a(href="#") Ворота откатные
+							li: a(href="#") Ворота раздвижные
+					.col.d-none.d-md-block
+						+e.title Навесы
+						ul
+							li: a(href="#") Навесы для авто
+							li: a(href="#") Навесы хай-тек
+							li: a(href="#") Навесы к дому
+							li: a(href="#") Кованые навесы
+							li: a(href="#") Навесы для бассейна
+							li: a(href="#") Каркасы
+					.col-md-auto
+						+e.contacts
+							+e.tel.h5(href="tel:+74955107785") +7 (495) 510-77-85
+							+e.email(href="mailto:info@zaborprof.ru") info@zaborprof.ru
+							+soc
+		+e.bottom
+			.container
+				.row
+					.col-md.order-2.order-md-1
+						p © 2023 “ЗаборПроф”.
+						+e.site-map(href="#") Карта сайта 
+					.col-md.text-center.order-1.order-md-2
+						+img('img/yandex-rating.png').res-i
+					.col-md.text-md-end.order-3
+						+e.policy(href="#") Политика конфиденциальности 
+						+e.scrollTop--js Наверх

@@ -4,27 +4,68 @@
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
 		<div class="container">
-			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</nav>
+			<div class="top-nav__wrap">
+				<div class="top-nav__row row">
+					<div class="col-auto">
+						<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+						</a>
+					</div>
+					<div class="col-auto">
+						<div class="top-nav__catalog d-none d-lg-flex"><span></span>Каталог
 						</div>
 					</div>
-				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+					<div class="col">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<div class="top-nav__catalog d-lg-none">Каталог
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+									</ul>
+								</nav>
+								<div class="top-nav__inner-wrap d-lg-none">
+									<div class="top-nav__city btn-modal-js" data-src="#modal-search-list">Москва
+										<svg class="icon icon-chevronDown ">
+											<use xlink:href="img/svg/sprite.svg#chevronDown"></use>
+										</svg>
+									</div>
+									<a class="top-nav__address" href="#">125481, г. Москва, ул. Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
+									</a>
+									<div class="top-nav__work">Работаем без выходных с 8:00 до 20:00
+									</div>
+									<a class="top-nav__email" href="mailto:info@masterazoborov.ru">info@masterazoborov.ru
+									</a>
+									<div class="top-nav__inner-btn btn btn-outline-primary btn-modal-js" data-src="#modal-call">Заказать звонок
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<a class="top-nav__btn btn btn-primary" href="#">
+							<svg class="icon icon-wallet ">
+								<use xlink:href="img/svg/sprite.svg#wallet"></use>
+							</svg>Прайс-лист
+						</a>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<a class="top-nav__btn btn btn-outline-primary" href="#">
+							<svg class="icon icon-calc ">
+								<use xlink:href="img/svg/sprite.svg#calc"></use>
+							</svg>Калькулятор
+						</a>
+					</div>
+					<div class="col-auto d-xl-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-xxl-none"><span></span>
+						</div>
 					</div>
 				</div>
 			</div>
