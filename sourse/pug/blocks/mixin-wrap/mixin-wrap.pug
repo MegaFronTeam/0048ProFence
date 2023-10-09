@@ -50,3 +50,40 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin contactUs()
+	+b.contact-us&attributes(attributes)
+		+soc
+			+item-sos('', 'tel:+74955107785').--tel
+				+icon('call')
+				span +7 (495) 510-77-85
+			+item-sos()
+				+iconC('whatsapp')
+			+item-sos()
+				+iconC('viber')
+			+item-sos()
+				+iconC('telegram')
+
+mixin categoryDropdown()
+	+b.category-dropdown
+		mixin item(icon, title, list=[])
+			+e.item&attributes(attributes)
+				+e.row.row
+					.col-lg-auto 
+						+e.category
+							+iconC(icon)
+							!= title
+					+e.content-col.col-lg
+						+e.content 
+							+e.title!= title
+							ul
+								each item in list
+									li: a(href="#")!= item
+		.container
+			+e.back.d-lg-none
+				+icon('chevron-left')
+				| Назад
+			+item('category-icon-1', 'Заборы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы', 'Заборы из 3Д сетки', 'Заборы жалюзи', 'Секционные заборы', 'Заборы для дачи', 'Заборы для коттеджа', 'Заборы для частного дома']).active
+			+item('category-icon-2', 'Столбы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
+			+item('category-icon-3', 'Ворота', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
+			+item('category-icon-4', 'Навесы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])

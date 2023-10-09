@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-xxl-none
+	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
 	-
@@ -32,24 +32,26 @@ mixin top-nav()
 					.col
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
+								+contactUs.d-lg-none
 								+e.catalog.d-lg-none
 									| Каталог
 									+icon('chevron-right')
-								+mnu()
+								+e.btn.d-lg-none(href='#')
+									+icon('wallet')
+									| Прайс-лист
+								+e.btn.d-lg-none(href='#')
+									+icon('calc')
+									| Калькулятор
+								+mnu(true)
 								+e.inner-wrap.d-lg-none
-									+e.city(data-src='#modal-search-list').btn-modal-js
-										| Москва
-										+icon('chevronDown')
+									+e.city(href='#')
+										| Ваш город: 
+										span Москва
+										+icon('chevron-down')
 									+e.address(href='#') 125481, г. Москва, ул. Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
 									+e.work Работаем без выходных с 8:00 до 20:00
 									+e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
-									+e.inner-btn.btn.btn-outline-primary(data-src='#modal-call').btn-modal-js Заказать звонок
-					//- .col-auto.d-none.d-lg-block
-					//- 	+e.city(data-src='#modal-search-list').btn-modal-js
-					//- 		| Москва
-					//- 		+icon('chevronDown')
-					//- .col-auto
-					//- 	+contactUs
+									+e.inner-btn.btn.btn-secondary(href='#') Заказать звонок
 					.col-auto.d-none.d-lg-block
 						+e.btn.btn.btn-primary(href='#')
 							+icon('wallet')
@@ -58,6 +60,9 @@ mixin top-nav()
 						+e.btn.btn.btn-outline-primary(href='#')
 							+icon('calc')
 							| Калькулятор
-					.col-auto.d-xl-none
+					.col-auto.d-lg-none: +e.call(href='#'): +icon('call')
+					.col-auto.d-lg-none: +e.call(href='#'): +iconC('whatsapp')
+					.col-auto.d-lg-none
 						+menu-toggle()
+		+categoryDropdown
 	// end top-nav

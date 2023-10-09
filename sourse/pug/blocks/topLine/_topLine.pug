@@ -2,8 +2,14 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col
+					+e.city(href='#')
+						| Ваш город: 
+						span Москва
+						+icon('chevron-down')
+				.col-auto: +e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
+				.col-auto: +soc
+				.col-auto: +e.tel(href='tel:+74957411161') +7 (495) 741-11-61
+				.col-auto: +e.btn(href='#') Заказать звонок
 	// end topLine

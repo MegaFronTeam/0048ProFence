@@ -7,8 +7,38 @@
 	fill: currentColor;
 }
 
-.iconC-telegram {
-	$h: 16;
+.iconC-category-icon-1 {
+	$h: 36;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-category-icon-2 {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-category-icon-3 {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-category-icon-4 {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-telegram {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.iconC-viber {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.iconC-whatsapp {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }

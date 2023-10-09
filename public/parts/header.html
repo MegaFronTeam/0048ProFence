@@ -1,6 +1,52 @@
 
 <!-- start header-->
 <header class="header" id="header">
+	<!-- start topLine-->
+	<div class="topLine section" id="topLine">
+		<div class="container">
+			<div class="topLine__row row">
+				<div class="col">
+					<a class="topLine__city" href="#">Ваш город: <span>Москва</span>
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="col-auto">
+					<a class="topLine__email" href="mailto:info@masterazoborov.ru">info@masterazoborov.ru
+					</a>
+				</div>
+				<div class="col-auto">
+					<div class="soc">
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="iconC iconC-telegram ">
+								<use xlink:href="img/svg/spriteC.svg#telegram"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="iconC iconC-viber ">
+								<use xlink:href="img/svg/spriteC.svg#viber"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="iconC iconC-whatsapp ">
+								<use xlink:href="img/svg/spriteC.svg#whatsapp"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="col-auto">
+					<a class="topLine__tel" href="tel:+74957411161">+7 (495) 741-11-61
+					</a>
+				</div>
+				<div class="col-auto">
+					<a class="topLine__btn" href="#">Заказать звонок
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end topLine-->
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
 		<div class="container">
@@ -17,36 +63,67 @@
 					<div class="col">
 						<div class="menu-mobile menu-mobile--js">
 							<div class="menu-mobile__inner">
+								<div class="contact-us d-lg-none">
+									<div class="soc">
+										<a class="soc__item soc__item--tel" href="tel:+74955107785" target="_blank">
+											<svg class="icon icon-call ">
+												<use xlink:href="img/svg/sprite.svg#call"></use>
+											</svg><span>+7 (495) 510-77-85</span>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-whatsapp ">
+												<use xlink:href="img/svg/spriteC.svg#whatsapp"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-viber ">
+												<use xlink:href="img/svg/spriteC.svg#viber"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-telegram ">
+												<use xlink:href="img/svg/spriteC.svg#telegram"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
 								<div class="top-nav__catalog d-lg-none">Каталог
 									<svg class="icon icon-chevron-right ">
 										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
 									</svg>
 								</div>
+								<a class="top-nav__btn d-lg-none" href="#">
+									<svg class="icon icon-wallet ">
+										<use xlink:href="img/svg/sprite.svg#wallet"></use>
+									</svg>Прайс-лист
+								</a>
+								<a class="top-nav__btn d-lg-none" href="#">
+									<svg class="icon icon-calc ">
+										<use xlink:href="img/svg/sprite.svg#calc"></use>
+									</svg>Калькулятор
+								</a>
 								<nav>
 									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Производство</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
 										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
 									</ul>
 								</nav>
 								<div class="top-nav__inner-wrap d-lg-none">
-									<div class="top-nav__city btn-modal-js" data-src="#modal-search-list">Москва
-										<svg class="icon icon-chevronDown ">
-											<use xlink:href="img/svg/sprite.svg#chevronDown"></use>
+									<a class="top-nav__city" href="#">Ваш город: <span>Москва</span>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
 										</svg>
-									</div>
+									</a>
 									<a class="top-nav__address" href="#">125481, г. Москва, ул. Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
 									</a>
 									<div class="top-nav__work">Работаем без выходных с 8:00 до 20:00
 									</div>
 									<a class="top-nav__email" href="mailto:info@masterazoborov.ru">info@masterazoborov.ru
 									</a>
-									<div class="top-nav__inner-btn btn btn-outline-primary btn-modal-js" data-src="#modal-call">Заказать звонок
-									</div>
+									<a class="top-nav__inner-btn btn btn-secondary" href="#">Заказать звонок
+									</a>
 								</div>
 							</div>
 						</div>
@@ -65,8 +142,125 @@
 							</svg>Калькулятор
 						</a>
 					</div>
-					<div class="col-auto d-xl-none">
-						<div class="toggle-menu-mobile toggle-menu-mobile--js d-xxl-none"><span></span>
+					<div class="col-auto d-lg-none">
+						<a class="top-nav__call" href="#">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="col-auto d-lg-none">
+						<a class="top-nav__call" href="#">
+							<svg class="iconC iconC-whatsapp ">
+								<use xlink:href="img/svg/spriteC.svg#whatsapp"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="category-dropdown">
+			<div class="container">
+				<div class="category-dropdown__back d-lg-none">
+					<svg class="icon icon-chevron-left ">
+						<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+					</svg>Назад
+				</div>
+				<div class="category-dropdown__item active">
+					<div class="category-dropdown__row row">
+						<div class="col-lg-auto"> 
+							<div class="category-dropdown__category">
+								<svg class="iconC iconC-category-icon-1 ">
+									<use xlink:href="img/svg/spriteC.svg#category-icon-1"></use>
+								</svg>Заборы
+							</div>
+						</div>
+						<div class="category-dropdown__content-col col-lg">
+							<div class="category-dropdown__content"> 
+								<div class="category-dropdown__title">Заборы
+								</div>
+								<ul>
+									<li><a href="#">Заборы из профнастила</a></li>
+									<li><a href="#">Заборы из евроштакетника</a></li>
+									<li><a href="#">Заборы из сетки рабицы</a></li>
+									<li><a href="#">Заборы из 3Д сетки</a></li>
+									<li><a href="#">Заборы жалюзи</a></li>
+									<li><a href="#">Секционные заборы</a></li>
+									<li><a href="#">Заборы для дачи</a></li>
+									<li><a href="#">Заборы для коттеджа</a></li>
+									<li><a href="#">Заборы для частного дома</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="category-dropdown__item">
+					<div class="category-dropdown__row row">
+						<div class="col-lg-auto"> 
+							<div class="category-dropdown__category">
+								<svg class="iconC iconC-category-icon-2 ">
+									<use xlink:href="img/svg/spriteC.svg#category-icon-2"></use>
+								</svg>Столбы
+							</div>
+						</div>
+						<div class="category-dropdown__content-col col-lg">
+							<div class="category-dropdown__content"> 
+								<div class="category-dropdown__title">Столбы
+								</div>
+								<ul>
+									<li><a href="#">Заборы из профнастила</a></li>
+									<li><a href="#">Заборы из евроштакетника</a></li>
+									<li><a href="#">Заборы из сетки рабицы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="category-dropdown__item">
+					<div class="category-dropdown__row row">
+						<div class="col-lg-auto"> 
+							<div class="category-dropdown__category">
+								<svg class="iconC iconC-category-icon-3 ">
+									<use xlink:href="img/svg/spriteC.svg#category-icon-3"></use>
+								</svg>Ворота
+							</div>
+						</div>
+						<div class="category-dropdown__content-col col-lg">
+							<div class="category-dropdown__content"> 
+								<div class="category-dropdown__title">Ворота
+								</div>
+								<ul>
+									<li><a href="#">Заборы из профнастила</a></li>
+									<li><a href="#">Заборы из евроштакетника</a></li>
+									<li><a href="#">Заборы из сетки рабицы</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="category-dropdown__item">
+					<div class="category-dropdown__row row">
+						<div class="col-lg-auto"> 
+							<div class="category-dropdown__category">
+								<svg class="iconC iconC-category-icon-4 ">
+									<use xlink:href="img/svg/spriteC.svg#category-icon-4"></use>
+								</svg>Навесы
+							</div>
+						</div>
+						<div class="category-dropdown__content-col col-lg">
+							<div class="category-dropdown__content"> 
+								<div class="category-dropdown__title">Навесы
+								</div>
+								<ul>
+									<li><a href="#">Заборы из профнастила</a></li>
+									<li><a href="#">Заборы из евроштакетника</a></li>
+									<li><a href="#">Заборы из сетки рабицы</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

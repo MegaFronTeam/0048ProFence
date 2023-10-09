@@ -1,9 +1,9 @@
 .menu{
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(lg) {
 
 		display: flex;
 		text-align: center;
-		@include roww(36px, m);
+		@include roww(24px, m);
 		flex-wrap: wrap;
 		border-bottom: none;
 	}
@@ -22,98 +22,99 @@
 	a, span{
 		cursor: pointer;
 		line-height: 1.4;
+		font-weight: 500;
 	}
-	.menu-item-has-children {
-		&:hover {
-			.sub-menu, .catalog-dropdown {
-				@include media-breakpoint-up(lg) {
-					opacity: 1;
-					pointer-events: all;
-				}
-			}
-		}
-		&.active {
-			& > a, span {
-				@include media-breakpoint-down(xl) {
-					background-color: $gray-100;
-					color: $primary;
-					&:after {
-						transform: translateY(-50%) rotateX(180deg);
-					}
-				}
-			}
-		}
-	}
-	.sub-menu {
-		// @include roww('48px');
-		a {
-			padding: 0;
-			&:hover {
-				background-color: transparent;
-				color: $primary;
-			}
-		}
-		@include media-breakpoint-down(xl) {
-			padding: rem(6) 0 rem(30);
-			display: none;
-			li {
-				border-top: none;
-				a {
-					display: inline-block;
-					padding: rem(6) rem(18);
-				}
-			}
-		}
-		@include media-breakpoint-up(xl) {
-			@include mt;
-			position: absolute;
-			top: calc(100% + var(--sPB) + rem(8));
-			left: calc(50% );
-			transform: translateX(-50%);
-			z-index: 100;
-			width: 100%;
-			background-color: #FFFFFF;
-			border: 1px solid $gray-300;
-			box-shadow: 0px 6px 12px rgba(5, 5, 5, 0.12);
-			border-radius: 12px;
-			opacity: 0;
-			pointer-events: none;
-			list-style: none;
-			text-align: left;
-			display: flex !important;
-			align-items: center;
-			flex-wrap: wrap;
-			padding: rem(48) rem(60);
-			&:hover {
-				opacity: 1;
-				pointer-events: all;
-			}
-			&::before {
-				content: '';
-				position: absolute;
-				width: 20%;
-				height: 100%;
-				left: 50%;
-				transform: translateX(-50%);
-				top: -36%;
-				z-index: -1;
-			}
-			li {
-				margin-right: rem(48);
-			}
-		}
-		@include media-breakpoint-up(xxl) {
-			top: calc(100% + var(--sPB) + rem(16));
-		}
-	}
+	// .menu-item-has-children {
+	// 	&:hover {
+	// 		.sub-menu, .catalog-dropdown {
+	// 			@include media-breakpoint-up(lg) {
+	// 				opacity: 1;
+	// 				pointer-events: all;
+	// 			}
+	// 		}
+	// 	}
+	// 	&.active {
+	// 		& > a, span {
+	// 			@include media-breakpoint-down(xl) {
+	// 				background-color: $gray-100;
+	// 				color: $primary;
+	// 				&:after {
+	// 					transform: translateY(-50%) rotateX(180deg);
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// .sub-menu {
+	// 	// @include roww('48px');
+	// 	a {
+	// 		padding: 0;
+	// 		&:hover {
+	// 			background-color: transparent;
+	// 			color: $primary;
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-down(xl) {
+	// 		padding: rem(6) 0 rem(30);
+	// 		display: none;
+	// 		li {
+	// 			border-top: none;
+	// 			a {
+	// 				display: inline-block;
+	// 				padding: rem(6) rem(18);
+	// 			}
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-up(xl) {
+	// 		@include mt;
+	// 		position: absolute;
+	// 		top: calc(100% + var(--sPB) + rem(8));
+	// 		left: calc(50% );
+	// 		transform: translateX(-50%);
+	// 		z-index: 100;
+	// 		width: 100%;
+	// 		background-color: #FFFFFF;
+	// 		border: 1px solid $gray-300;
+	// 		box-shadow: 0px 6px 12px rgba(5, 5, 5, 0.12);
+	// 		border-radius: 12px;
+	// 		opacity: 0;
+	// 		pointer-events: none;
+	// 		list-style: none;
+	// 		text-align: left;
+	// 		display: flex !important;
+	// 		align-items: center;
+	// 		flex-wrap: wrap;
+	// 		padding: rem(48) rem(60);
+	// 		&:hover {
+	// 			opacity: 1;
+	// 			pointer-events: all;
+	// 		}
+	// 		&::before {
+	// 			content: '';
+	// 			position: absolute;
+	// 			width: 20%;
+	// 			height: 100%;
+	// 			left: 50%;
+	// 			transform: translateX(-50%);
+	// 			top: -36%;
+	// 			z-index: -1;
+	// 		}
+	// 		li {
+	// 			margin-right: rem(48);
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-up(xxl) {
+	// 		top: calc(100% + var(--sPB) + rem(16));
+	// 	}
+	// }
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{rem(1)};
+	--h: #{rem(2)};
 	--color: #000;
-	--position: calc(var(--h) * 4);
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: #000;
 		background-color: transparent;
@@ -124,12 +125,12 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 30);
+	height: calc(var(--h)* 12);
 	position: relative; 
-	font-size: 30px;
+	font-size: 24px;
 	width: 1em;
-	background-color: $gray-100;
-	border-radius: 6px;
+	// background-color: $gray-100;
+	// border-radius: 6px;
 	cursor: pointer;
 	span:after,
 	span:before {
@@ -155,15 +156,16 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: rem(16);
+		width: rem(20);
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
 		backface-visibility: hidden; 
 		transform-origin: 50% 50%;
+		border-radius: 20px;
 	}
 }
-@include media-breakpoint-down(xl) {
+@include media-breakpoint-down(lg) {
 
 	
 
@@ -174,14 +176,14 @@
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
 		width: 100%;
-		top: rem(55);
+		top: rem(60);
 		// left: 0;
 		right: 0;
 		background-color: $body-bg;
-		border: 1px solid $gray-300;
-		@include media-breakpoint-up(lg) {
-			top: rem(71);
-		}
+		// border: 1px solid $gray-300;
+		// @include media-breakpoint-up(lg) {
+		// 	top: rem(71);
+		// }
 		&:not(.active){
 			transform: translate3d(0, -120%,0);
 			--opacity: 0;
@@ -207,17 +209,17 @@
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(19)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(18)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-			height: calc(var(--vh) * 100 - rem(55));
+			height: calc(var(--vh) * 100 - rem(60));
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
-			@include media-breakpoint-up(lg) {
-				height: calc(var(--vh) * 100 - rem(76));
-			}
+			// @include media-breakpoint-up(lg) {
+			// 	height: calc(var(--vh) * 100 - rem(76));
+			// }
 		}
 
 		&.active { 
@@ -236,10 +238,15 @@
 			margin: 0;
 			border-top: 1px solid $gray-300;
 			width: 100%;
+			&:last-child {
+				a, span {
+					border-bottom: 1px solid $gray-300;
+				}
+			}
 			a, span {
 				// font-size: 16px;
 				@include mt;
-				padding: rem(18) rem(40) rem(18) rem(18);
+				padding: rem(16.25) rem(18);
 				display: block;
 				border-radius: 0;
 				&:hover {

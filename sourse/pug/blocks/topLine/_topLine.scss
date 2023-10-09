@@ -1,14 +1,20 @@
 
-	// start .topLine
-	.topLine {
-		 
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .topLine
+.topLine {
+	--sPT: #{rem(12)};
+	--sPB: #{rem(12)};
+	background-color: $gray-100;
+	display: none;
+	position: relative;
+	z-index: 1000;
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		display: block;
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-x: #{rem(24)};
 
+		align-items: center;
 	}
 	.section-title{
 		
@@ -21,6 +27,46 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	&__city {
+		@include mt;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		line-height: 1.4;
+		font-weight: 500;
+		color: $gray-600;
+		span {
+			color: $body-color;
+			margin-left: rem(6);
+		}
+		.icon {
+			color: $secondary;
+			flex: 0 0 auto;
+			font-size: rem(20);
+		}
+	}
+	&__email {
+		font-weight: 500;
+		line-height: 1.4;
+		color: $gray-600;
+		&:hover {
+			color: $primary;
+		}
+	}
+	&__tel {
+		font-weight: 700;
+		line-height: 1.4;
+
+	}
+	&__btn {
+		line-height: 1.4;
+		color: $secondary;
+		font-weight: 500;
+		&:hover {
+			color: #FF3B41;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

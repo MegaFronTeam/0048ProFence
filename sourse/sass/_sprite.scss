@@ -17,10 +17,30 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
 }
+.icon-call {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-check {
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
+}
+.icon-chevron-down {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-chevron-left {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-chevron-right {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-fb {
 	$h: 24;
@@ -38,9 +58,9 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-viber {
-	$h: 16;
+	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(20 / #{$h} *1em );
 }
 .icon-vk {
 	$h: 24;
@@ -53,7 +73,7 @@
 	width: calc(20 / #{$h} *1em );
 }
 .icon-whatsapp {
-	$h: 16;
+	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(20 / #{$h} *1em );
 }

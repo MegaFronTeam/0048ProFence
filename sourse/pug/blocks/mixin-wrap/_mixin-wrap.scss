@@ -1,7 +1,7 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(12px, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 
@@ -15,8 +15,8 @@
 		}
 		
 	}
-	.icon{
-		font-size: rem(30);
+	.iconC{
+		font-size: rem(20);
 	}
 
 
@@ -110,4 +110,197 @@
 .breadcrumb-item{
 	width: auto;
 	margin-right: rem(32);
+}
+
+.contact-us {
+	width: calc(100% - rem(36));
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 6px;
+	border: 1px solid $gray-300;
+	margin-bottom: rem(18);
+	.soc {
+		--bs-gutter-x: 0;
+		flex-wrap: wrap;
+		&__item {
+			width: calc(100% / 3 - var(--bs-gutter-x));
+			padding: rem(12);
+			flex-grow: 1;
+			border-right: 1px solid $gray-300;
+			line-height: 1.4;
+			&:hover {
+				background-color: $gray-300;
+			}
+			&:first-child,
+			&:last-child {
+				border-right: none;
+			}
+			&--tel {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $gray-900;
+				font-weight: 700;
+				border-bottom: 1px solid $gray-300;
+				padding: rem(11.5) rem(12);
+				.icon {
+					flex: 0 0 auto;
+					font-size: rem(20);
+					color: $secondary;
+					margin-right: rem(6);
+				}
+			}
+		}
+	}
+}
+
+.category-dropdown {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	@include media-breakpoint-down(lg) {
+		@include mt;
+		height: calc(var(--vh) * 100);
+		transform: translateX(100%);
+		overflow-y: auto;
+		overflow-x: hidden;
+		display: block !important;
+		&.active {
+			transform: none;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		top: calc(100% + rem(1));
+		position: absolute;
+		padding: rem(48) 0;
+		border-radius: 0px 0px 10px 10px;
+		display: none;
+	}
+	.container {
+		position: relative;
+		@include media-breakpoint-down(lg) {
+			--bs-gutter-x: 0;
+
+			max-width: 100%;
+		}
+	}
+	&__item {
+		&.active {
+			@include media-breakpoint-up(lg) {
+				.category-dropdown__category {
+					background-color: $gray-100;
+					border-left-color: $primary;
+				}
+				.category-dropdown__content-col {
+					z-index: 1;
+				}
+				.category-dropdown__content {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+	}
+	&__row {
+		--bs-gutter-x: 0;
+		--bs-gutter-y: 0;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: 0;
+			--bs-gutter-y: 0;
+		}
+	}
+	&__category {
+		@include mt;
+		display: flex;
+		align-items: center;
+		padding: rem(12) rem(15);
+		border-left: 3px solid #fff;
+		font-weight: 600;
+		line-height: 1.4;
+		@include media-breakpoint-down(lg) {
+			background-color: $gray-100;
+			border-left-color: $primary;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: rem(12) rem(21);
+			width: rem(300);
+			font-weight: 500;
+			border-right: 1px solid $gray-300;
+			cursor: pointer;
+		}
+		&:hover {
+			background-color: $gray-100;
+			border-left-color: $gray-100;
+		}
+		.iconC {
+			flex: 0 0 auto;
+			margin-right: rem(12);
+		}
+	}
+	&__content-col {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: 0;
+			left: rem(318);
+			width: calc(100% - rem(300) - rem(36));
+			z-index: -1;
+		}
+	}
+	&__content {
+		@include media-breakpoint-up(lg) {
+			padding: rem(19) rem(24);
+			opacity: 0;
+			pointer-events: none;
+		}
+		ul {
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				@include roww('', '18px');
+				columns: 3;
+			}
+			li {
+				display: inline-block;
+				width: 100%;
+				a {
+					display: block;
+					line-height: 1.4;
+					@include media-breakpoint-down(lg) {
+						border-bottom: 1px solid $gray-300;
+						padding: rem(15.5) rem(18);
+					}
+				}
+			}
+		}
+	}
+	&__title {
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: rem(24);
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
+	&__back {
+		@include mt;
+		padding: rem(15.5) rem(18);
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		line-height: 1.4;
+		cursor: pointer;
+		&:hover {
+			color: $primary;
+		}
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(20);
+			margin-right: rem(6);
+			color: $secondary;
+		}
+	}
 }
