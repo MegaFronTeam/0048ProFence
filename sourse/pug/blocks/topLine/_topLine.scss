@@ -1,8 +1,8 @@
 
 // start .topLine
 .topLine {
-	--sPT: #{rem(12)};
-	--sPB: #{rem(12)};
+	--sPT: #{rem(11.5)};
+	--sPB: #{rem(11.5)};
 	background-color: $gray-100;
 	display: none;
 	position: relative;
@@ -51,6 +51,7 @@
 		font-weight: 500;
 		line-height: 1.4;
 		color: $gray-600;
+		letter-spacing: rem(0.6);
 		&:hover {
 			color: $primary;
 		}
@@ -58,12 +59,13 @@
 	&__tel {
 		font-weight: 700;
 		line-height: 1.4;
-
+		letter-spacing: rem(0.3);
 	}
 	&__btn {
 		line-height: 1.4;
 		color: $secondary;
 		font-weight: 500;
+		letter-spacing: rem(0.6);
 		&:hover {
 			color: #FF3B41;
 		}

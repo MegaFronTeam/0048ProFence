@@ -18,8 +18,8 @@
 		background-color: #fff;
 	}
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(14)};
-		--sPB: #{rem(14)};
+		--sPT: #{rem(17.5)};
+		--sPB: #{rem(17.5)};
 	}
 	&__row{
 		--bs-gutter-x: #{rem(12)};
@@ -29,6 +29,12 @@
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(12)};
 			--bs-gutter-y: #{rem(12)};
+		}
+	}
+	&__col {
+		@include media-breakpoint-down(lg) {
+			padding: 0 ;
+			margin: 0;
 		}
 	}
 	&__wrap {
@@ -110,7 +116,7 @@
 		.icon {
 			flex: 0 0 auto;
 			font-size: rem(20);
-			margin-right: rem(6);
+			margin-right: rem(4);
 		}
 		@include media-breakpoint-down(lg) {
 			padding: rem(15.5) rem(18);

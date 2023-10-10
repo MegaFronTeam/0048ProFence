@@ -23,13 +23,13 @@ mixin top-nav()
 		.container
 			+e.wrap
 				+e.row.row
-					.col-auto
+					.col-auto.me-auto
 						+e.logo(href="/"): +img('img/svg/logo.svg')
-					.col-auto
+					.col-auto.d-none.d-lg-flex
 						+e.catalog.d-none.d-lg-flex
 							span
 							| Каталог
-					.col
+					+e.col.col-auto.col-lg
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								+contactUs.d-lg-none

@@ -1,0 +1,45 @@
+mixin sCapturesItem(h, btn, ceb)
+	+e.item&attributes(attributes)
+		+b.section-title
+			h2!= h
+		+e.content
+			block
+		+e.bottom-row 
+			.row
+				.col-lg-auto
+					+e.btn.btn.btn-secondary(href="#")!= btn
+				if ceb
+					.col-lg-auto.order-first.order-lg-last
+						+img('img/ceb.png').ceb
+
+mixin sCaptures(data)
+	// start sCaptures
+	+b.SECTION.sCaptures.section#sCaptures&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					+sCapturesItem(`Покупка забора <span>в&nbsp;кредит</span>`, `Оставить заявку`, true)
+						//- +e.img-sm
+						//- 	+img('img/svg/sCaptures-1.svg')
+						p Сумма кредита от&nbsp;100&nbsp;000 до&nbsp;6&nbsp;000&nbsp;000&nbsp;₽ на&nbsp;срок от&nbsp;12&nbsp;до&nbsp;84&nbsp;месяцев под ставку от&nbsp;14,9%.
+						//- .row
+						//- 	.col-md-auto.col-lg-12.col-xl-auto
+						//- 		+e.prop
+						//- 			span Ставка
+						//- 			.h3 14,9%
+						//- 	.col-md-auto.col-lg-12.col-xl-auto
+						//- 		+e.prop
+						//- 			span Срок кредита
+						//- 			.h3 12-84&nbsp;мес.
+						//- 	.col-12
+						//- 		+e.prop
+						//- 			span Сумма кредита
+						//- 			.h3 100&nbsp;000&nbsp;&minus; 6&nbsp;000&nbsp;000 руб
+
+				.col-lg-6
+					+sCapturesItem(`Калькулятор <span>стоимости</span>`, `Перейти в&nbsp;калькулятор`).--light
+						p Рассчитайте стоимость вашего будущего ограждения
+						+e.img-lg
+							+img('img/sCaptures-2.png')
+
+	// end sCaptures

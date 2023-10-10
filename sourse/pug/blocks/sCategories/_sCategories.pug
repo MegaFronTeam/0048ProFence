@@ -1,0 +1,35 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Каталог #[span заборов]
+				p При заказе ограждения бесплатный замер и&nbsp;проект забора в&nbsp;подарок
+			+e.row.row
+				mixin item(icon, title, img, btn, list=[])
+					+e.item&attributes(attributes)
+						+e.head
+							.row
+								.col-auto
+									+iconC(`${icon}`)
+								.col-auto
+									.h5!= title
+									p от 1690 ₽/м.п
+								.col-auto.ms-auto
+									if btn
+										+e.btn.btn.btn-sm.btn-secondary(href='#') Вызвать замерщика
+									else
+										+e.btn.btn.btn-sm.btn-secondary(href='#'): +icon('chevron-right')
+						ul
+							each item in list
+								li: a(href="#")!= item
+						+img(`img/sCategories-img-${img}.png`)(class=`img-${img}`)
+				.col-lg-8
+					+item('category-icon-1', 'Заборы', 1, true, ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы', 'Заборы из 3Д сетки', 'Заборы жалюзи', 'Секционные заборы', 'Заборы для дачи', 'Заборы для коттеджа', 'Заборы для частного дома']).--large
+				.col-lg-4
+					+item('category-icon-2', 'Столбы', 2, false, ['Столбы кирпичные', 'Столбы металлические'])
+				.col-lg-6
+					+item('category-icon-3', 'Ворота', 3, false, ['Ворота откатные', 'Ворота раздвижные'])
+				.col-lg-6
+					+item('category-icon-4', 'Навесы', 4, false, ['Навесы для авто', 'Навесы хай-тек', 'Навесы к дому', 'Кованые навесы', 'Навесы для бассейна', 'Каркасы'])
+	// end sCategories

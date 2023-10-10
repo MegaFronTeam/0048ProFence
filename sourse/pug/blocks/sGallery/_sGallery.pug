@@ -1,0 +1,17 @@
+mixin sGallery(title="Фотогалерея наших <span> ограждений </span>")
+	// start sGallery
+	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2!= title
+			mixin sGalleryItem(img)
+				+e.slide.swiper-slide
+					+e.item(href=`img/sGallery-lg-${img}.jpg` data-fancybox="sGallery").btn-modal-js
+						+img(`img/sGallery-${img}.jpg`, 'bg')
+			.def-slider-js
+				+e.slider.swiper
+					.swiper-wrapper
+						- for (var x = 1; x < 10; x++)
+							+sGalleryItem(x)
+				.swiper-scrollbar.d-md-none
+	// end sGallery

@@ -1,0 +1,29 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 
+					span 8 шагов 
+					| установки ограждения
+				p Заборы устанавливают для различных типов участков, включая, но&nbsp;не&nbsp;ограничиваясь следующими
+			.slider-wrapper
+				+e.slider.swiper.slider-auto-js
+					.swiper-wrapper
+						mixin slide(img, text)
+							+e.slide.swiper-slide
+								+e.item&attributes(attributes)
+									+e.img-wrap
+										+img(`img/sSteps-${img}.jpg`, 'bg')
+									+e.caption!= text
+						+slide(1, `Размечаем участок`)
+						+slide(2, `Бурим лунки через каждые 2,5&nbsp;м`)
+						+slide(3, `Забиваем и&nbsp;трамбуем столбы грунтом или щебнем`)
+						+slide(4, `Привариваем лаги`)
+						+slide(5, `Устанавливаем ворота и&nbsp;калитку`)
+						+slide(6, `Монтируем необходимый материал`)
+						+slide(7, `Проверяем работу`)
+						+slide(8, `Сдаем готовое ограждение заказчику`)
+					.swiper-scrollbar.d-md-none
+			+e.btn.btn.btn-secondary(href="#") Отправить заявку	
+	// end sSteps

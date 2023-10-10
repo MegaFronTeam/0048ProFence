@@ -121,6 +121,44 @@ function eventHandler() {
 		if (scrollTopBtn) window.scrollTo(0, 0);
 	});
 
+
+	const sliderParents = document.querySelectorAll('.slider-wrapper');
+	for (const sliderParent of sliderParents) {
+		const autoSlider = new Swiper((sliderParent.querySelector('.slider-auto-js')), {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			watchOverflow: true,
+			observer: true,
+			observeSlideChildren: true,
+			freeMode: {
+				enabled: true,
+				sticky: true,
+				momentumVelocityRatio: 0.3
+			},
+			lazy: {
+				loadPrevNext: true,
+			},
+			breakpoints: {
+				768: {
+					spaceBetween: 24
+				}
+			},
+			scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+		});
+	};
+
+	const defSliders = document.querySelectorAll('.def-slider-js');
+	for (const defSlider of defSliders) {
+		new Swiper((defSlider.querySelector('.swiper')), {
+			slidesPerView: 'auto',
+			scrollbar: {
+        el: defSlider.querySelector('.swiper-scrollbar'),
+      },
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -4,17 +4,19 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sGallery/_sGallery.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sCaptures/_sCaptures.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Главная'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -22,7 +24,15 @@ block pagecontent
 	
 	+parts('header')
 	main
-		
+		+headerBlock
+		+sCategories
+		+sAbout(1, `<span>Заборы для дома и дачи</span> от производителя`)
+		+sSteps
+		+sGallery
+		+sWhy
+		+sAbout(2, `О компании <span>ЗаборПроф в Москве</span>`, 'Подробнее о компании').sAbout--2
+		+sCaptures()
+		+sAbout(3, `<span>Что нужно знать</span> перед покупкой забора`).bg-white
 	+parts('footer')
       
 
