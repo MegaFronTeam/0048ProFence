@@ -10,6 +10,9 @@ include ../blocks/sSteps/_sSteps.pug
 include ../blocks/sGallery/_sGallery.pug
 include ../blocks/sWhy/_sWhy.pug
 include ../blocks/sCaptures/_sCaptures.pug
+include ../blocks/sOrder/_sOrder.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sContactInfo/_sContactInfo.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -33,6 +36,9 @@ block pagecontent
 		+sAbout(2, `О компании <span>ЗаборПроф в Москве</span>`, 'Подробнее о компании').sAbout--2
 		+sCaptures()
 		+sAbout(3, `<span>Что нужно знать</span> перед покупкой забора`).bg-white
+		+sOrder
+		+sSlider()
+		+sContactInfo
 	+parts('footer')
       
 

@@ -1,0 +1,67 @@
+mixin sContactInfo(data)
+	// start sContactInfo
+	+b.SECTION.sContactInfo.section#sContactInfo&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Контакты
+				.row
+					.col
+						p Направьте свой запрос, наш специалист перезвонит в&nbsp;ближайшее время!
+					.col-lg-4.col-xxl-3
+						+e.item
+							.icon-wrap: +icon('mail')
+							div
+								a.h5(href="mailto:info@zaborprof.ru") info@zaborprof.ru
+								span по любым вопросам 
+					.col-lg-4.col-xxl-3
+						+e.item
+							.icon-wrap: +icon('call2')
+							div
+								a.h5(href="tel:+74957411161") +7 (495) 741-11-61
+								span с 8:00 до 21:00 пн-пт
+			+form-wrap
+				+e.callBack-row
+					.row
+						+e.col.col-12.col-lg-6.col-xl-auto.col-xxl
+							+input('Ваше имя', 'text')
+						+e.col.col-12.col-lg-6.col-xl-auto.col-xxl
+							+input('Ваш телефон', 'tel').is-invalid
+						.col-12.col-xl
+							+e.send
+								+policy
+								+e.btn.BUTTON.btn.btn-secondary(type='submit') Заказать звонок
+				+e.map-col
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+					script.
+						ymaps.ready(init);
+						function init() {
+							var myMap = new ymaps.Map("map", {
+									center: [55.76, 37.64],
+									zoom: 10
+							}, {
+									searchControlProvider: 'yandex#search'
+							});
+							myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+							}, {
+									// Опции.
+									// Необходимо указать данный тип макета.
+									iconLayout: 'default#image',
+									// Своё изображение иконки метки.
+									iconImageHref: 'img/svg/mapPin.svg',
+									// Размеры метки.
+									iconImageSize: [48, 48],
+									// Смещение левого верхнего угла иконки относительно
+									// её "ножки" (точки привязки).
+									iconImageOffset: [-24, -24]
+							}),
+							myMap.geoObjects
+								.add(myPlacemark)
+						}
+					+e.map
+						#map
+			+e.bottom-row.row
+				.col-md
+					p.mb-0 Россия, Москва, улица Фомичёвой, 16к3
+				.col-md-auto 
+					+downloadRequisites
+	// end sContactInfo

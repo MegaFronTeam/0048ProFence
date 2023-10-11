@@ -321,7 +321,7 @@ ul {
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
-	border-radius: 50%;
+	border-radius: rem(10);
 	background-color: var(--swiperBgDef);
 	border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
@@ -342,7 +342,9 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
+		width: 1em;
+		height: 1em;
 	}
 
 	&::after {
@@ -516,9 +518,7 @@ iframe {
 // 	--bs-btn-color: #{$body-color};
 // }
 
-.btn,
-.form-control,
-.form-select{
+.btn{
 	box-shadow: none !important;
 }
 

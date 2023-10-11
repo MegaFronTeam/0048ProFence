@@ -150,13 +150,31 @@ function eventHandler() {
 	};
 
 	const defSliders = document.querySelectorAll('.def-slider-js');
-	for (const defSlider of defSliders) {
-		new Swiper((defSlider.querySelector('.swiper')), {
-			slidesPerView: 'auto',
-			scrollbar: {
-        el: defSlider.querySelector('.swiper-scrollbar'),
-      },
-		});
+	if (defSliders.length > 0) {
+		for (const defSlider of defSliders) {
+			new Swiper((defSlider.querySelector('.swiper')), {
+				slidesPerView: 'auto',
+				scrollbar: {
+					el: defSlider.querySelector('.swiper-scrollbar'),
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		}
+	}
+
+	let showMoreBtns = document.querySelectorAll('.sAbout__show-more');
+	let content = document.querySelectorAll('.sAbout__content');
+	if(showMoreBtns.length > 0) {
+		for (let i = 0; i < showMoreBtns.length; i++) {
+			showMoreBtns[i].addEventListener('click', () => {
+				$(showMoreBtns[i]).slideUp();
+				$(content[i]).find('p:hidden').slideDown()
+				$(content[i]).find('span:hidden').slideDown()
+			});
+		}
 	}
 
 };

@@ -12,9 +12,9 @@ include components/btn.pug
 include components/ddgroup.pug
 
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev&attributes(attributes)
 		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next&attributes(attributes)
 		+icon('chevron-right')
 //- /arrow for swiper-slider
 
@@ -38,13 +38,15 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
+mixin page-head(t, isBg=true, img, ...items)
+	+b.page-head&attributes(attributes)
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
-
-			h1= t
+			if isBg
+				+e.img-wrap.bg-wrap
+					+img(`img/${img}`, 'bg').picture-bg
+					h1!= t
 
 mixin parts(elem)
 	script.
@@ -87,3 +89,8 @@ mixin categoryDropdown()
 			+item('category-icon-2', 'Столбы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
 			+item('category-icon-3', 'Ворота', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
 			+item('category-icon-4', 'Навесы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
+
+mixin downloadRequisites()
+	a.requisites(href='#')
+		+icon('attach')
+		| Скачать реквизиты #[span &nbsp;PDF]

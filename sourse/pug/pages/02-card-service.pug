@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sServiceHead/_sServiceHead.pug
+
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sGallery/_sGallery.pug
+//- include ../blocks/sCaptures/_sCaptures.pug
+//- include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Забор из евроштакетника под ключ в Москве'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Забор из&nbsp;евроштакетника под ключ в&nbsp;Москве', true, 'page-head-bg-1.jpg', 'Забор из евроштакетника под ключ').--description
+		+sServiceHead
+		//- +headerBlock
+		//- +sCategories
+		//- +sAbout(1, `<span>Заборы для дома и дачи</span> от производителя`)
+		//- +sGallery
+		//- +sAbout(2, `О компании <span>ЗаборПроф в Москве</span>`, 'Подробнее о компании').sAbout--2
+		//- +sCaptures()
+		//- +sContactInfo
+		+sSlider()
+		+sSteps
+		+sAbout(3, `Почему клиенты <span> выбирают нас</span>`).bg-white
+		+sWhy
+		+sAbout(3, `<span>Строительство ограждений</span> от профессионалов`).bg-white
+		+sOrder
+	+parts('footer')
+      
+
+
+

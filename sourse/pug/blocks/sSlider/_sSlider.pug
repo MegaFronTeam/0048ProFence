@@ -1,0 +1,26 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span Акции] и спецпредложения
+			.def-slider-js
+				+e.slider.swiper
+					.swiper-wrapper
+						mixin slide(img, tag, text)
+							+e.slide.swiper-slide
+								+e.item(href='#').bg-wrap&attributes(attributes)
+									+img(`img/sSlider-${img}.jpg`, 'bg').picture-bg
+									+e.tag!= tag
+									p!= text
+						+slide(1, 'Постоянная акция', `Бесплатный замер при заключении договора`)
+						+slide(2, 'до 15 сентября 2023', `Калитка к&nbsp;забору в&nbsp;подарок при заказе забора из&nbsp;профнастила от&nbsp;103 п.м`)
+						+slide(3, 'до 16 сентября 2023', `Накладной замок &laquo;Титан&raquo; в&nbsp;подарок при заказе забора от&nbsp;99&nbsp;п.м`)
+						+slide(4, 'До конца 2023', `При заказе забора или ворот покраска каркаса в&nbsp;грунт ГФ-21&nbsp;в подарок`)
+						+slide(1, 'Постоянная акция', `Бесплатный замер при заключении договора`)
+						+slide(2, 'до 15 сентября 2023', `Калитка к&nbsp;забору в&nbsp;подарок при заказе забора из&nbsp;профнастила от&nbsp;103 п.м`)
+						+slide(3, 'до 16 сентября 2023', `Накладной замок &laquo;Титан&raquo; в&nbsp;подарок при заказе забора от&nbsp;99&nbsp;п.м`)
+						+slide(4, 'До конца 2023', `При заказе забора или ворот покраска каркаса в&nbsp;грунт ГФ-21&nbsp;в подарок`)
+				.swiper-scrollbar
+				+arrow.d-none.d-sm-flex
+	// end sSlider

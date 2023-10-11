@@ -1,0 +1,17 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+e.wrap
+				+form-wrap
+					+b.section-title
+						h2 Заказать подбор <br> ограждения
+						p Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время!
+					+e.row.row
+						.col-md-6
+							+input('Ваш телефон', 'tel')
+						.col-md-6
+							+e.BUTTON.btn.btn.btn-secondary Отправить заявку
+					+policy()
+				+img('img/sOrder-bg-2.png')
+	// end sOrder
