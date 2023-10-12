@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Контакты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body data-bg="02-card-service.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- start sContact-->
+				<section class="sContact section" id="sContact">
+					<div class="container">
+						<div class="sContact__row sContact__row--top row">
+							<div class="col-lg-6">
+								<h1>Контактная информация</h1>
+								<div class="sContact__item">
+									<div class="icon-wrap">
+										<svg class="icon icon-mail ">
+											<use xlink:href="img/svg/sprite.svg#mail"></use>
+										</svg>
+									</div>
+									<div><a class="h5" href="mailto:info@zaborprof.ru">info@zaborprof.ru</a><span>по любым вопросам </span></div>
+								</div>
+								<div class="sContact__item">
+									<div class="icon-wrap">
+										<svg class="icon icon-call2 ">
+											<use xlink:href="img/svg/sprite.svg#call2"></use>
+										</svg>
+									</div>
+									<div><a class="h5" href="tel:+74957411161">+7 (495) 741-11-61</a><span>с 8:00 до 21:00 пн-пт</span></div>
+								</div>
+									<div class="sContact__item-sm">
+										<div class="h6">Мессенджеры</div>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="iconC iconC-telegram ">
+													<use xlink:href="img/svg/spriteC.svg#telegram"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="iconC iconC-viber ">
+													<use xlink:href="img/svg/spriteC.svg#viber"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank">
+												<svg class="iconC iconC-whatsapp ">
+													<use xlink:href="img/svg/spriteC.svg#whatsapp"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+									<div class="sContact__item-sm">
+										<div class="h6">Адрес</div>
+										<p>Россия, Москва, улица Фомичёвой, 16к3</p>
+									</div>
+									<div class="sContact__item-sm">
+										<div class="h6">График работы</div>
+										<p>Работаем без выходных с 8:00 до 20:00</p>
+									</div>
+								<div class="sContact__item-sm">
+									<div class="sContact__btn btn btn-outline-primary btn-modal-js" data-src="#modal-call">Заказать звонок
+									</div>
+								</div>
+								<div class="sContact__item-sm"><a class="requisites" href="#">
+										<svg class="icon icon-attach ">
+											<use xlink:href="img/svg/sprite.svg#attach"></use>
+										</svg>Карточка организации<span>&nbsp;PDF</span></a>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sContact__map-wrap">
+									<div id="map"></div>
+									<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+									<script>
+										ymaps.ready(init);
+										function init() {
+											var myMap = new ymaps.Map("map", {
+													center: [55.85732369729193,37.43951643254084],
+													zoom: 15
+											}, {
+													searchControlProvider: 'yandex#search'
+											});
+											myPlacemark = new ymaps.Placemark([55.85732369729193,37.43951643254084], {
+											}, {
+													iconLayout: 'default#image',
+													iconImageHref: 'img/svg/mapPin.svg',
+													iconImageSize: [48, 48],
+													iconImageOffset: [-24, -48]
+											}),
+											myMap.geoObjects
+												.add(myPlacemark)
+										}
+									</script>
+								</div>
+							</div>
+						</div>
+						<div class="form-wrap">
+							<form>
+								<div class="h3">Связаться с&nbsp;нами</div>
+								<div class="form-wrap__subtitle">Если у&nbsp;Вас есть вопросы или предложения, свяжитесь с&nbsp;нами через контактную форму ниже.
+								</div>
+								<div class="form-wrap__row row">
+									<div class="col-lg-6">
+										<div class="row">
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше имя"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш телефон"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-12">
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="email" name="email" type="email" placeholder="Ваш email"/>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Ваше сообщение"></textarea>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-6">
+										<button class="form-wrap__btn btn btn-secondary">Отправить заявку
+										</button>
+									</div>
+									<div class="col-md-6">
+										<div class="form-wrap__policy">
+											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Я ознакомился с условиями обработки <a href="#">персональных данных</a></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+				<!-- start sOrder-->
+				<section class="sOrder section" id="sOrder">
+					<div class="container">
+						<div class="sOrder__wrap">
+							<div class="form-wrap">
+								<form>
+									<div class="section-title">
+										<h2>Заказать подбор <br> ограждения</h2>
+										<p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время!</p>
+									</div>
+									<div class="form-wrap__row row">
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш телефон"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md-6">
+											<button class="form-wrap__btn btn btn-secondary">Отправить заявку
+											</button>
+										</div>
+									</div>
+									<div class="form-wrap__policy">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Я ознакомился с условиями обработки <a href="#">персональных данных</a></span>
+										</label>
+									</div>
+								</form>
+							</div><img src="img/sOrder-bg-2.png" alt="" loading="lazy"/>
+						</div>
+					</div>
+				</section>
+				<!-- end sOrder-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

@@ -36,23 +36,17 @@ mixin sContactInfo(data)
 						ymaps.ready(init);
 						function init() {
 							var myMap = new ymaps.Map("map", {
-									center: [55.76, 37.64],
-									zoom: 10
+									center: [55.856020244218115,37.43367994572443],
+									zoom: 15
 							}, {
 									searchControlProvider: 'yandex#search'
 							});
-							myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+							myPlacemark = new ymaps.Placemark([55.85732369729193,37.43951643254084], {
 							}, {
-									// Опции.
-									// Необходимо указать данный тип макета.
 									iconLayout: 'default#image',
-									// Своё изображение иконки метки.
 									iconImageHref: 'img/svg/mapPin.svg',
-									// Размеры метки.
 									iconImageSize: [48, 48],
-									// Смещение левого верхнего угла иконки относительно
-									// её "ножки" (точки привязки).
-									iconImageOffset: [-24, -24]
+									iconImageOffset: [-24, -48]
 							}),
 							myMap.geoObjects
 								.add(myPlacemark)

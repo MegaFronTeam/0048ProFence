@@ -963,7 +963,8 @@ $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 // $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.0192 10.5584L11.039 12.5386L10.0309 11.5313L9.02278 10.524L8.28483 11.262L7.54688 12L9.25734 13.7109C10.1981 14.652 10.9891 15.4219 11.0151 15.4219C11.0411 15.4219 12.2806 14.2035 13.7695 12.7145L16.4766 10.0071L15.761 9.29259C15.3674 8.89964 15.035 8.57812 15.0224 8.57812C15.0097 8.57812 14.1083 9.46922 13.0192 10.5584Z' fill='%2308A76D'/%3E%3C/svg%3E%0A") !default;
-$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+// $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='23' height='23' rx='11.5' fill='white' stroke='%23EFF0F2'/%3E%3Crect x='1' y='1' width='22' height='22' rx='11' fill='white' stroke='%23EA2026' stroke-width='2'/%3E%3Crect x='6' y='6' width='12' height='12' rx='6' fill='%23EA2026'/%3E%3C/svg%3E%0A") !default;
 
 $form-check-input-indeterminate-color:          $component-active-color !default;
 $form-check-input-indeterminate-bg-color:       $component-active-bg !default;
@@ -1016,9 +1017,9 @@ $form-select-disabled-color:        null !default;
 $form-select-disabled-bg:           $input-disabled-bg !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x center !default;
-$form-select-bg-size:               16px 12px !default; // In pixels because image dimensions
+$form-select-bg-size:               20px !default; // In pixels because image dimensions
 $form-select-indicator-color:       $gray-800 !default;
-$form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+$form-select-indicator:             url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.29265 7.29289C5.68317 6.90237 6.31634 6.90237 6.70686 7.29289L9.99976 10.5858L13.2926 7.29289C13.6832 6.90237 14.3163 6.90237 14.7069 7.29289C15.0974 7.68342 15.0974 8.31658 14.7069 8.70711L10.7069 12.7071C10.3163 13.0976 9.68317 13.0976 9.29265 12.7071L5.29265 8.70711C4.90212 8.31658 4.90212 7.68342 5.29265 7.29289Z' fill='%23EA2026'/%3E%3C/svg%3E%0A") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
 $form-select-feedback-icon-position:    center right $form-select-indicator-padding !default;
@@ -1550,10 +1551,10 @@ $modal-scale-transform:             scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-padding-y:               $spacer !default;
-$alert-padding-x:               $spacer !default;
-$alert-margin-bottom:           1rem !default;
-$alert-border-radius:           var(--#{$prefix}border-radius) !default;
+$alert-padding-y:               rem(20) !default;
+$alert-padding-x:               rem(18) !default;
+$alert-margin-bottom:           rem(18) !default;
+$alert-border-radius:           0 !default;
 $alert-link-font-weight:        $font-weight-bold !default;
 $alert-border-width:            var(--#{$prefix}border-width) !default;
 $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side

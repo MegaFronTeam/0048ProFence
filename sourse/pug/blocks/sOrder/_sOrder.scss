@@ -1,9 +1,10 @@
 // start .sOrder
 .sOrder {
 	--sPT: #{rem(0)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(36)};
 	--sTPB: #{rem(18)};
 	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(96)};
 		--sTPB: #{rem(36)};
 	}
 	&__wrap {

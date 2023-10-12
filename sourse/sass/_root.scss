@@ -5,13 +5,13 @@
 
 	@include media-breakpoint-up(lg) {
 
-		--sPT: #{rem(96)};
-		--sPB: #{rem(96)};
+		--sPT: #{rem(48)};
+		--sPB: #{rem(48)};
 		--sTPB: #{rem(48)};
 	}
 
-	--sPT: #{rem(36)};
-	--sPB: #{rem(36)};
+	--sPT: #{rem(18)};
+	--sPB: #{rem(18)};
 	--sTPB: #{rem(24)};
 
 

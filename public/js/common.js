@@ -177,6 +177,18 @@ function eventHandler() {
 		}
 	}
 
+	$('.plus-js').click(function () {
+		const input = $(this).closest(".spinner--js").find("input");
+		input.val(+input.val() + 1);
+	});
+
+	$('.minus-js').click(function () {
+		const input = $(this).closest(".spinner--js").find("input");
+		if (input.val() > 0) {
+			input.val(+input.val() - 1);
+		}
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

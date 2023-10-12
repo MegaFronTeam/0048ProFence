@@ -7,9 +7,15 @@
 	// 	--bs-gutter-x: #{rem()};
 	// 	--bs-gutter-y: #{rem()};
 	// }
-	// .section-title {
-
-	// }
+	.section-title {
+		p {
+			max-width: rem(690);
+			margin-left: auto;
+			margin-right: auto;
+			font-size: rem(16);
+			line-height: 1.5;
+		}
+	}
 	// &__col {
 	// }
 	&__slider {
@@ -26,6 +32,9 @@
 			justify-content: center;
 			margin-bottom: rem(48);
 		}
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-y: #{rem(50.600)};
+		} 
 		.sSteps__slide {
 			@include media-breakpoint-down(md) {
 				width: rem(212);
@@ -94,8 +103,11 @@
 		line-height: 1.5;
 		padding: rem(36) 0 0;
 		font-weight: 600;
+		max-width: rem(270);
+		margin-left: auto;
+		margin-right: auto;
 		@include media-breakpoint-up(md) {
-			line-height: 1.35;
+			line-height: 1.45;
 		}
 		&::after {
 			content: counter(num);

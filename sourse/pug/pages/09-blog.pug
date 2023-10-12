@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= 'blog-page' 
+	- let  bg= '02-card-service.jpg'
+
+block title
+	- let  title= 'Блог'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Блог <span>компании</span>', '', '', 'Блог')
+		+sBlog
+		+sOrder
+	+parts('footer')
+      
+
+
+

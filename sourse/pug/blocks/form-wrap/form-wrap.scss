@@ -1,6 +1,19 @@
 .form-wrap {
 	&__input-wrap {
 		// @extend .form-group;
+		&.spinner {
+			label {
+				position: relative;
+			}
+			.form-wrap__input {
+				padding-right: rem(50);
+			}
+			.btnSpinner {
+				@include a-cent(y);
+				justify-content: center;
+				right: rem(18);
+			}
+		}
 	}
 	&__input {
 		// @extend .form-control;
@@ -12,7 +25,9 @@
 	}
 	&__input-title {
 		display: inline-block;
-		line-height: calc(20 / 16);
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: 1.4;
 		margin-bottom: rem(12);
 	}
 
@@ -132,6 +147,30 @@ input::-webkit-inner-spin-button {
 		&:checked {
 			background-color: #fff;
 			border-color: $gray-300;
+		}
+	}
+}
+
+.btnSpinner {
+	display: inline-flex;
+	flex-direction: column;
+	button {
+		@include mt;
+		width: rem(20);
+		height: rem(20);
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $gray-600;
+		&:hover,
+		&:active {
+			color: $secondary;
+		}
+		.icon {
+			font-size: rem(20);
 		}
 	}
 }

@@ -1,0 +1,28 @@
+mixin sOptions(data)
+	// start sOptions
+	+b.SECTION.sOptions.section#sOptions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span Варианты исполнения ] забора из профнастила
+			+e.row.row
+				mixin sOptionItem(img, h, t)
+					.col-sm-6.col-lg-4
+						+e.item(href="#")&attributes(attributes)
+							+e.sample
+								if img
+									+img(`img/sOptions-${img}.jpg`, 'bg')
+							div
+								.h6!= h
+								span!= t
+
+				+sOptionItem(``, `RAL 8017`, `Шоколадно-коричневый`)(style="--bgColor: #373331;")
+				+sOptionItem(``, `RAL 3005`, `Оранжевый`)(style="--bgColor: #FF5900;")
+				+sOptionItem(``, `RAL 3011`, `Серый`)(style="--bgColor: #8B8B8B;")
+				+sOptionItem(``, `RAL 3003`, `Зеленый`)(style="--bgColor: #38A868;")
+				+sOptionItem(1, `Темное дерево`, `Покрытие Printech`)
+				+sOptionItem(2, `Темный дуб`, `Покрытие Printech`)
+				+sOptionItem(3, `Золотой орех`, `Покрытие Printech`)
+				+sOptionItem(4, `Красный кирпич`, `Покрытие Printech`)
+				+sOptionItem(5, `Дикий камень 3d`, `Покрытие Printech`)
+
+	// end sOptions

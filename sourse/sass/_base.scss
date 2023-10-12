@@ -653,3 +653,58 @@ h6, .h6 {
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+.main-page {
+	.sCategories, .sAbout, .sSteps, .sGallery, .sWhy, .sAbout, .sSlider, .sContactInfo {
+		--sPT: #{rem(36)};
+		--sPB: #{rem(36)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(96)};
+			--sPB: #{rem(96)};
+		}
+	}
+	.sCaptures {
+		--sPB: 0;
+		@include media-breakpoint-up(lg) {
+			--sPB: 0;
+		}
+	}
+	.sOrder {
+		--sPT: 0;
+		@include media-breakpoint-up(lg) {
+			--sPT: 0;
+		}
+	}
+}
+
+.card-service-page {
+	.page-head {
+		margin-bottom: 0;
+	}
+	.sGallery--2 {
+		--sPT: 0;
+	}
+	.sOrder {
+		--sPB: #{rem(36)};
+		@include media-breakpoint-up(lg) {
+			--sPB: #{rem(96)};
+		}
+	}
+}
+
+.blog-page {
+	.page-head {
+		margin-bottom: 0;
+		h1 {
+			span {
+				color: $primary;
+			}
+		}
+		.breadcrumb { 
+			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(60);
+			}
+		}
+	}
+}

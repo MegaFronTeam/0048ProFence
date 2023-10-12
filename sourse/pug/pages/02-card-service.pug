@@ -5,20 +5,19 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sServiceHead/_sServiceHead.pug
-
-//- include ../blocks/sCategories/_sCategories.pug
-//- include ../blocks/sGallery/_sGallery.pug
-//- include ../blocks/sCaptures/_sCaptures.pug
-//- include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sPriceList/_sPriceList.pug
+include ../blocks/sOptions/_sOptions.pug
 include ../blocks/sSlider/_sSlider.pug
 include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sGallery/_sGallery.pug
 include ../blocks/sWhy/_sWhy.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sOrder/_sOrder.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  mainPage= 'card-service-page' 
+	- let  bg= '02-card-service.jpg'
 
 block title
 	- let  title= 'Забор из евроштакетника под ключ в Москве'
@@ -31,18 +30,17 @@ block pagecontent
 	main
 		+page-head('Забор из&nbsp;евроштакетника под ключ в&nbsp;Москве', true, 'page-head-bg-1.jpg', 'Забор из евроштакетника под ключ').--description
 		+sServiceHead
-		//- +headerBlock
-		//- +sCategories
-		//- +sAbout(1, `<span>Заборы для дома и дачи</span> от производителя`)
-		//- +sGallery
-		//- +sAbout(2, `О компании <span>ЗаборПроф в Москве</span>`, 'Подробнее о компании').sAbout--2
-		//- +sCaptures()
-		//- +sContactInfo
-		+sSlider()
+		+sCategories2
+		+sPriceList
+		+sOptions
+		+sSlider().bg-white
 		+sSteps
-		+sAbout(3, `Почему клиенты <span> выбирают нас</span>`).bg-white
+		+sAbout(3, `Почему клиенты <span> выбирают нас</span>`).sAbout--3.bg-white
+		+sGallery2.bg-white
 		+sWhy
-		+sAbout(3, `<span>Строительство ограждений</span> от профессионалов`).bg-white
+		+sAbout(3, `Строительство ограждений <span>от профессионалов</span>`).sAbout--3.bg-white
+			p Компания &laquo;Лига заборов&raquo; предлагает купить забор в&nbsp;Москве с&nbsp;установкой под ключ по&nbsp;доступным ценам. Мы&nbsp;имеем огромный опыт производства и&nbsp;установки ограждений любого типа. На&nbsp;все виды заборов распространяется гарантия от&nbsp;2х&nbsp;лет. В&nbsp;удобное для вас время, на&nbsp;объект приедет специалист для проведения замера и&nbsp;расчета стоимости забора. Благодаря профессионализму и&nbsp;опыту наших мастеров, изгородь станет не&nbsp;только надежной защитой вашего дома, но&nbsp;и&nbsp;придаст участку завершенный вид. 
+			p Наши мастера выполнят строительство недорогих заборов для загородных домов, дач, коттеджей в&nbsp;Московской области. Заказчик получит полный комплекс работ. Ограждения выполняются из&nbsp;металла, дерева, кирпича, бетона. Поможем определиться с&nbsp;выбором материала, а&nbsp;также с&nbsp;видом изгороди для дачного участка. Для заказа услуги достаточно позвонить на&nbsp;наш номер телефона или заполнить заявку по&nbsp;форме обратной связи на&nbsp;сайте.
 		+sOrder
 	+parts('footer')
       

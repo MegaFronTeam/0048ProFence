@@ -33,3 +33,29 @@ mixin sCategories(data)
 				.col-lg-6
 					+item('category-icon-4', 'Навесы', 4, false, ['Навесы для авто', 'Навесы хай-тек', 'Навесы к дому', 'Кованые навесы', 'Навесы для бассейна', 'Каркасы'])
 	// end sCategories
+
+mixin sCategories2(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					span Виды забора
+					|  из&nbsp;евроштакетника
+			+e.row.row
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-1.jpg`, `Односторонний`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-2.jpg`, `Двухсторонний`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-3.jpg`, `М-образный`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-4.jpg`, `П-образный`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-1.jpg`, `Полукруглый`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-5.jpg`, `С&nbsp;откатными воротами`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-6.jpg`, `Шахматкой`, `от&nbsp;1690&nbsp;р/м.п`)
+				.col-md-6.col-xl-4
+					+categoryItem(`categoryItem-7.jpg`, `На винтовых сваях`, `от&nbsp;1690&nbsp;р/м.п`)

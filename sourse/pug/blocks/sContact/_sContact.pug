@@ -2,8 +2,73 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
-	// end sContact
+			+e.row--top.row
+				.col-lg-6
+					h1 Контактная информация
+					+e.item
+						.icon-wrap: +icon('mail')
+						div
+							a.h5(href="mailto:info@zaborprof.ru") info@zaborprof.ru
+							span по любым вопросам 
+					+e.item
+						.icon-wrap: +icon('call2')
+						div
+							a.h5(href="tel:+74957411161") +7 (495) 741-11-61
+							span с 8:00 до 21:00 пн-пт
+					mixin item-sm(h)
+						+e.item-sm
+							.h6!= h
+							if block
+								block
+					+item-sm(`Мессенджеры`)
+						+soc
+					+item-sm(`Адрес`)
+						p Россия, Москва, улица Фомичёвой, 16к3
+					+item-sm(`График работы`)
+						p Работаем без выходных с 8:00 до 20:00
+					+e.item-sm
+						+e.btn.btn.btn-outline-primary(data-src='#modal-call').btn-modal-js Заказать звонок
+					+e.item-sm
+						+downloadRequisites('Карточка организации')
+
+				.col-lg-6
+					+e.map-wrap
+						#map
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+						script.
+							ymaps.ready(init);
+							function init() {
+								var myMap = new ymaps.Map("map", {
+										center: [55.85732369729193,37.43951643254084],
+										zoom: 15
+								}, {
+										searchControlProvider: 'yandex#search'
+								});
+								myPlacemark = new ymaps.Placemark([55.85732369729193,37.43951643254084], {
+								}, {
+										iconLayout: 'default#image',
+										iconImageHref: 'img/svg/mapPin.svg',
+										iconImageSize: [48, 48],
+										iconImageOffset: [-24, -48]
+								}),
+								myMap.geoObjects
+									.add(myPlacemark)
+							}
+			+form-wrap
+				.h3 Связаться с&nbsp;нами
+				+e.subtitle Если у&nbsp;Вас есть вопросы или предложения, свяжитесь с&nbsp;нами через контактную форму ниже.
+				+e.row.row
+					.col-lg-6
+						.row
+							.col-12
+								+input('Ваше имя')
+							.col-12
+								+input('Ваш телефон', 'tel')
+							.col-12
+								+input('Ваш email', 'email')
+					.col-lg-6
+						+input('Ваше сообщение', 'textarea')
+					.col-md-6
+						+e.BUTTON.btn.btn.btn-secondary Отправить заявку
+					.col-md-6
+						+policy()

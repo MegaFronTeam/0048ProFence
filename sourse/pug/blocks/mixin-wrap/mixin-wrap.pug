@@ -47,6 +47,8 @@ mixin page-head(t, isBg=true, img, ...items)
 				+e.img-wrap.bg-wrap
 					+img(`img/${img}`, 'bg').picture-bg
 					h1!= t
+			else if t
+				h1!= t
 
 mixin parts(elem)
 	script.
@@ -90,7 +92,64 @@ mixin categoryDropdown()
 			+item('category-icon-3', 'Ворота', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
 			+item('category-icon-4', 'Навесы', ['Заборы из профнастила', 'Заборы из евроштакетника', 'Заборы из сетки рабицы'])
 
-mixin downloadRequisites()
+mixin downloadRequisites(t='Скачать реквизиты')
 	a.requisites(href='#')
 		+icon('attach')
-		| Скачать реквизиты #[span &nbsp;PDF]
+		!= t
+		| #[span &nbsp;PDF]
+
+mixin categoryItem(img, title, price, date, btn)
+	+b.categoryItem&attributes(attributes)
+		+e.img-wrap(href='#')
+			+img(`img/${img}`, 'bg')
+		+e.link
+			a.h6(href='#')!= title
+			p!= price
+			if date && btn
+				.row
+					.col-auto
+						+e.btn.btn.btn-outline-primary(href='#') Подробнее
+					.col-auto
+						+e.date!= date
+
+mixin customTable(head)
+	+b.custom-table-wrap&attributes(attributes)
+		//- +e.table-head!= head
+		mixin tr(key, val, ...items)
+			tr
+				if key && val
+					td!= key
+					td!= val
+				else
+					each item in items
+						td!= item
+		table
+			thead
+				tr
+					th.custom-table-wrap__table-head(colspan=2)!= head
+			block
+
+
+mixin btnSpinner()
+	+b.SPAN.btnSpinner()
+		button.plus-js(type="button")
+			+icon('chevron-up')
+		button.minus-js(type="button")
+			+icon('chevron-down')
+
+mixin inputNumber(label, placeholder)
+	.form-wrap__input-wrap.form-group.spinner.spinner--js
+		if label
+			span.form-wrap__input-title!= label
+		label
+			input.form-wrap__input.form-control(name='number' type='number' min="0" placeholder=`${placeholder}` step='any')
+			+btnSpinner()
+
+mixin choiceOption(title, name)
+	// start choiceOption
+	+b.choiceOption
+		label
+			+e.INPUT.input.form-check-input(name=`${name}` type='radio')&attributes(attributes)
+			+e.SPAN.btn
+				+iconC('sCalculator-1')
+				span.h6!= title 

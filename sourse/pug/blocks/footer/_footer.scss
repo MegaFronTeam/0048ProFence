@@ -202,7 +202,7 @@
 	}
 	&__btn {
 		--bs-btn-padding-y: #{rem(11)};
-		--bs-btn-padding-x: #{rem(20)};
+		--bs-btn-padding-x: #{rem(15.800)};
 		margin-bottom: rem(24);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: 0;

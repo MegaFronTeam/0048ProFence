@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sCalculator/_sCalculator.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '02-card-service.jpg'
+
+block title
+	- let  title= 'Калькулятор'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Калькулятор стоимости<br>ограждения', true, 'page-head-bg-2.jpg', 'Калькулятор')
+		+sCalculator
+		+sOrder
+	+parts('footer')
+      
+
+
+

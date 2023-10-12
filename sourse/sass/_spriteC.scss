@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.iconC-attention {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .iconC-category-icon-1 {
 	$h: 36;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -23,6 +28,11 @@
 	width: calc(36 / #{$h} *1em );
 }
 .iconC-category-icon-4 {
+	$h: 36;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(36 / #{$h} *1em );
+}
+.iconC-sCalculator-1 {
 	$h: 36;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(36 / #{$h} *1em );

@@ -1,0 +1,115 @@
+// start .sCalculator
+.sCalculator {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(36)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(96)};
+	}
+	.form-wrap {
+		&__row {
+			&.form-wrap__row--radioBtns {
+				--bs-gutter-y: var(--bs-gutter-x);
+				justify-content: center;
+				margin-bottom: rem(24);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(48);
+				}
+			}
+			&.form-wrap__row--filters {
+				justify-content: center;
+				@include media-breakpoint-up(lg) {
+					--bs-gutter-y: #{rem(23)};
+				}
+			}
+			&--main {
+				--bs-gutter-y: #{rem(18)};
+			}
+		}
+		&__send-feendback {
+			border-radius: 12px;
+			background: $gray-100;
+			padding: rem(18);
+			@include media-breakpoint-up(lg) {
+				padding: rem(37) rem(36);
+			}
+			p {
+				margin-bottom: 0;
+				line-height: 1.7;
+				text-align: center;
+			}
+		}
+		&__input-title {
+			line-height: 1.429;
+		}
+		&__title {
+			text-align: center;
+			margin-bottom: rem(12);
+			line-height: 1.4;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(18);
+			}
+		}
+		&__btn {
+			width: 100%;
+		}
+		&__policy {
+			.custom-input {
+				&__text {
+					a {
+						color: $body-color;
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+		&__price {
+			font-weight: 500;
+			line-height: 1.4;
+			color: $gray-600;
+			text-align: center;
+			span {
+				display: block;
+				color: $body-color;
+				margin-top: rem(6);
+				line-height: 1.4;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__description {
+		margin-top: rem(36);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(96);
+		}
+		.h3 {
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(25);
+			}
+		}
+		p {
+			line-height: 1.7;
+			margin-bottom: rem(23);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCalculator

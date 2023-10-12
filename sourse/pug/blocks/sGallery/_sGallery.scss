@@ -22,16 +22,27 @@
 		@include media-breakpoint-up(md) {
 			padding-bottom: 0;
 		}
-		.swiper-wrapper {
-			@include media-breakpoint-down(md) {
-				margin-right: rem(-18);
-			}
-			@include media-breakpoint-up(md) {
-				transform: none !important;
-				flex-wrap: wrap;
-				@include roww('24px', '24px', m);
-				width: auto;
-			}
+		// .swiper-wrapper {
+		// 	@include media-breakpoint-down(md) {
+		// 		margin-right: rem(-18);
+		// 	}
+		// 	@include media-breakpoint-up(md) {
+		// 		transform: none !important;
+		// 		flex-wrap: wrap;
+		// 		@include roww('24px', '24px', m);
+		// 		width: auto;
+		// 	}
+		// }
+	}
+	&__swiper-wrapper {
+		@include media-breakpoint-down(md) {
+			margin-right: rem(-18);
+		}
+		@include media-breakpoint-up(md) {
+			transform: none !important;
+			flex-wrap: wrap;
+			@include roww('24px', '24px', m);
+			width: auto;
 		}
 	}
 	&__slide {
@@ -120,7 +131,25 @@
 			--bs-btn-border-radius: #{rem(8)};
 		}
 	}
-
+	&--2 {
+		.sGallery {
+			&__slider {
+				width: 100%;
+				max-width: rem(624);
+				margin: 0 auto;
+				padding-bottom: rem(30);
+				.swiper-wrapper {
+					margin: 0 auto;
+				}
+			}
+			&__slide {
+				@include media-breakpoint-up(md) {
+					width: 100%;
+					max-width: rem(624);
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

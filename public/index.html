@@ -234,7 +234,7 @@
 						<div class="sAbout__row row">
 							<div class="sAbout__content-col col-lg-6">
 								<div class="sAbout__content">
-									<h2><span>Заборы для дома и дачи</span> от производителя</h2>
+									<h2><span>Заборы для дома и дачи</span> от&nbsp;производителя</h2>
 									<div class="sAbout__img-wrap">
 										<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-1.jpg" alt="" loading="lazy"/>
 										</div>
@@ -337,11 +337,11 @@
 				<section class="sGallery section" id="sGallery">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>Фотогалерея наших <span> ограждений </span></h2>
+							<h2><span>Фотогалерея </span> наших ограждений</h2>
 						</div>
 						<div class="def-slider-js">
 							<div class="sGallery__slider swiper">
-								<div class="swiper-wrapper">
+								<div class="sGallery__swiper-wrapper swiper-wrapper">
 										<div class="sGallery__slide swiper-slide">
 											<a class="sGallery__item btn-modal-js" href="img/sGallery-lg-1.jpg" data-fancybox="sGallery"><img class="object-fit-js" src="img/sGallery-1.jpg" alt="" loading="lazy"/>
 											</a>
@@ -696,23 +696,17 @@
 										ymaps.ready(init);
 										function init() {
 											var myMap = new ymaps.Map("map", {
-													center: [55.76, 37.64],
-													zoom: 10
+													center: [55.856020244218115,37.43367994572443],
+													zoom: 15
 											}, {
 													searchControlProvider: 'yandex#search'
 											});
-											myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+											myPlacemark = new ymaps.Placemark([55.85732369729193,37.43951643254084], {
 											}, {
-													// Опции.
-													// Необходимо указать данный тип макета.
 													iconLayout: 'default#image',
-													// Своё изображение иконки метки.
 													iconImageHref: 'img/svg/mapPin.svg',
-													// Размеры метки.
 													iconImageSize: [48, 48],
-													// Смещение левого верхнего угла иконки относительно
-													// её "ножки" (точки привязки).
-													iconImageOffset: [-24, -24]
+													iconImageOffset: [-24, -48]
 											}),
 											myMap.geoObjects
 												.add(myPlacemark)
@@ -731,7 +725,7 @@
 							<div class="col-md-auto"> <a class="requisites" href="#">
 									<svg class="icon icon-attach ">
 										<use xlink:href="img/svg/sprite.svg#attach"></use>
-									</svg>Скачать реквизиты <span>&nbsp;PDF</span></a>
+									</svg>Скачать реквизиты<span>&nbsp;PDF</span></a>
 							</div>
 						</div>
 					</div>

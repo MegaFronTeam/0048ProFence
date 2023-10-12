@@ -125,7 +125,7 @@
 				// top: 55%;
 			}
 			@include media-breakpoint-up(xxl) {
-				left: 65%;
+				left: 59%;
 				// top: 61%;
 			}
 		}
@@ -137,8 +137,7 @@
 		@include media-breakpoint-up(lg) {
 		}
 		@include media-breakpoint-up(xl) {
-			max-width: rem(235);
-			width: 100%;
+			width: rem(235);
 		}
 		// @include media-breakpoint-down(md) {
 		// 	--bs-btn-padding-y: #{rem(14)};

@@ -26,6 +26,8 @@
     justify-content: flex-end;
     padding: rem(18) rem(30);
     color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
     @include media-breakpoint-up(lg) {
       padding: rem(24);
     }
