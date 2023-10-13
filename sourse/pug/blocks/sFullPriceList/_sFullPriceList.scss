@@ -1,0 +1,123 @@
+// start .sFullPriceList
+.sFullPriceList {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(36)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(96)};
+	}
+	.h3 {
+		margin-bottom: rem(6);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	ol {
+		list-style-type: none;
+		margin-bottom: 0;
+		padding: 0;
+		li {
+			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(60);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.dd-group {
+		&__item {
+			border-bottom: 1px solid $gray-300;
+			&.active {
+				.dd-group__head {
+					&:before {
+						background-color: $gray-100;
+						transform: rotate(45deg);
+						background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.1015 4.07072C9.92095 4.15274 9.74028 4.33341 9.65826 4.51394C9.59804 4.64651 9.59399 4.80921 9.59325 7.12506L9.59248 9.59479L7.12275 9.59556C4.80691 9.5963 4.6442 9.60034 4.51163 9.66057C3.82946 9.97047 3.82946 10.9769 4.51163 11.2868C4.6442 11.347 4.80691 11.3511 7.12275 11.3518L9.59248 11.3526L9.59325 13.8223C9.59399 16.1382 9.59804 16.3009 9.65826 16.4335C9.96816 17.1156 10.9746 17.1156 11.2845 16.4335C11.3447 16.3009 11.3488 16.1382 11.3495 13.8223L11.3503 11.3526L13.82 11.3518C16.1359 11.3511 16.2986 11.347 16.4311 11.2868C17.1133 10.9769 17.1133 9.97047 16.4311 9.66057C16.2986 9.60034 16.1359 9.5963 13.82 9.59556L11.3503 9.59479L11.3495 7.12506C11.3487 4.36871 11.3612 4.51341 11.1015 4.25375C10.8559 4.00807 10.4164 3.92767 10.1015 4.07072Z' fill='#222'/%3E%3C/svg%3E%0A");
+					}
+				}
+			}
+		}
+		&__head {
+			display: flex;
+			align-items: center;
+			padding: rem(18) 0;
+			cursor: pointer;
+			font-weight: 600;
+			line-height: 1.4;
+			@include media-breakpoint-up(lg) {
+				padding: rem(24) 0;
+			}
+			&:before {
+				@include mt;
+				content: '';
+				display: block;
+				width: rem(48);
+				height: rem(48);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $secondary;
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.1015 4.07072C9.92095 4.15274 9.74028 4.33341 9.65826 4.51394C9.59804 4.64651 9.59399 4.80921 9.59325 7.12506L9.59248 9.59479L7.12275 9.59556C4.80691 9.5963 4.6442 9.60034 4.51163 9.66057C3.82946 9.97047 3.82946 10.9769 4.51163 11.2868C4.6442 11.347 4.80691 11.3511 7.12275 11.3518L9.59248 11.3526L9.59325 13.8223C9.59399 16.1382 9.59804 16.3009 9.65826 16.4335C9.96816 17.1156 10.9746 17.1156 11.2845 16.4335C11.3447 16.3009 11.3488 16.1382 11.3495 13.8223L11.3503 11.3526L13.82 11.3518C16.1359 11.3511 16.2986 11.347 16.4311 11.2868C17.1133 10.9769 17.1133 9.97047 16.4311 9.66057C16.2986 9.60034 16.1359 9.5963 13.82 9.59556L11.3503 9.59479L11.3495 7.12506C11.3487 4.36871 11.3612 4.51341 11.1015 4.25375C10.8559 4.00807 10.4164 3.92767 10.1015 4.07072Z' fill='#fff'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px;
+				flex: 0 0 auto;
+				margin-right: rem(18);
+				@include media-breakpoint-up(lg) {
+					margin-right: rem(24);
+				}
+			}
+		}
+		.custom-table-wrap {
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+			th, td {
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					text-align: left;
+				}
+			}
+			td {
+				width: auto;
+			}
+			&--columns {
+				overflow-x: auto;
+				overflow-y: hidden;
+				table {
+					min-width: rem(465);
+				}
+			}
+		}
+	}
+	&__description {
+		margin-top: rem(36);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(96);
+		}
+		.h3 {
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(25);
+			}
+		}
+		p {
+			line-height: 1.7;
+			margin-bottom: rem(23);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFullPriceList

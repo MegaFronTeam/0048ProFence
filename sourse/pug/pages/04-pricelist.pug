@@ -1,0 +1,30 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sFullPriceList/_sFullPriceList.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '02-card-service.jpg'
+
+block title
+	- let  title= 'Прайс-лист'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Полный прайс-лист на ограждения', true, 'page-head-bg-3.jpg', 'Прайс-лист')
+		+sFullPriceList
+		+sOrder
+	+parts('footer')
+      
+
+
+

@@ -247,7 +247,7 @@ class JSCCommon {
 		}, { passive: true });
 	}
 	static animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		$(document).on('click', ".nav-block__item", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
@@ -358,6 +358,35 @@ class JSCCommon {
 			: topNav.classList.remove('fixed');
 	}
 
+	static setActiveAnchor(navLiParam) {
+    const navLi = document.querySelectorAll(navLiParam);
+    
+    const sections = document.querySelectorAll(`.hrefs-js [id]`);
+
+    if (sections.length > 0 && navLi.length > 0) {
+      document.addEventListener(
+        'scroll',
+        function () {
+          var current = '';
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 80) {
+              current = section.getAttribute('id');
+            }
+          });
+          navLi.forEach((li) => {
+            li.classList.remove('active');
+            if (li.getAttribute('href') == `#${current}` && li.getAttribute('href') != `#`) {
+              li.classList.add('active');
+            }
+          });
+        },
+        { passive: true },
+      );
+    }
+  }
+
 	static init() {
 		this.modalCall();
 		// this.tabscostume('tabs');
@@ -368,8 +397,9 @@ class JSCCommon {
 		this.makeDDGroup();
 		this.disabledBtn();
 		this.setScreen();
+		// this.animateScroll();
+		this.setActiveAnchor('.nav-block__item');
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-		// JSCCommon.animateScroll();
 
 		// JSCCommon.CustomInputFile(); 
 

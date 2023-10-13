@@ -1,0 +1,12 @@
+mixin s404(data)
+	// start s404
+	+b.SECTION.s404.section#s404&attributes(attributes)
+		+e.container.container
+			+e.logo(href='/'): +img('img/svg/logo.svg')
+			+e.wrap
+				h1 К сожалению, запрашиваемая страница 
+					span не найдена
+				p Скорее всего, это случилось по одной из следующих причин: страница переехала, страницы больше нет или вы допустили небольшую опечатку при вводе адреса.
+				+e.btn.btn.btn-secondary(href='/') Вернуться на главную
+			+img('img/404.png').img
+	// end s404

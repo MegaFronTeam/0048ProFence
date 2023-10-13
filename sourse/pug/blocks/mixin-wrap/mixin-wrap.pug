@@ -126,7 +126,10 @@ mixin customTable(head)
 		table
 			thead
 				tr
-					th.custom-table-wrap__table-head(colspan=2)!= head
+					if head
+						th.custom-table-wrap__table-head(colspan=2)!= head
+					else
+						block!= th
 			block
 
 
@@ -153,3 +156,8 @@ mixin choiceOption(title, name)
 			+e.SPAN.btn
 				+iconC('sCalculator-1')
 				span.h6!= title 
+
+mixin navBlock()
+	+b.nav-block
+		+e.content.sticky-js 
+			block

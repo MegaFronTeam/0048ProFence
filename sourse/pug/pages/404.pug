@@ -1,0 +1,27 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/s404/_s404.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '02-card-service.jpg'
+
+block title
+	- let  title= '404'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	//- +parts('header')
+	main
+		+s404
+	//- +parts('footer')
+      
+
+
+

@@ -188,7 +188,18 @@ function eventHandler() {
 			input.val(+input.val() - 1);
 		}
 	});
-
+	
+	$('.sticky-js').hcSticky({
+    stickTo: $('.sticky-content-js'),
+		top: 40,
+		mobileFirst: true,
+		disable: true,
+		responsive: {
+			992: {
+				disable: false,
+			},
+		},
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
