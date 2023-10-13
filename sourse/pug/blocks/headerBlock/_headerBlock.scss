@@ -183,14 +183,17 @@
 					margin-left: calc(-50vw + 100% + rem(8));
 					margin-right: 0;
 					min-width: auto;
-
+					max-width: none;
 				}
 			}
 			&__wrap {
 				// padding: rem(36) 0;
 				@include media-breakpoint-up(lg) {
 					padding-left: rem(18);
-					padding-right: rem(18);
+					// padding-right: rem(18);
+				}
+				@include media-breakpoint-up(xxl) {
+					padding-left: rem(96);
 				}
 				h1 {
 					max-width: none;
