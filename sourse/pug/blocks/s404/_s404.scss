@@ -3,6 +3,7 @@
 	--sPT: #{rem(24)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	display: flex;
 	text-align: center;
 	min-height: calc(var(--vh) * 100);
 	@include media-breakpoint-up(md) {
