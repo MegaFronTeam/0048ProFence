@@ -1,0 +1,25 @@
+mixin sThanks(data)
+	// start sThanks
+	+b.SECTION.sThanks.section#sThanks&attributes(attributes)
+		.container
+			+e.wrap
+				+e.content
+					h1 #[span Спасибо ] за ваше обращение!
+					p Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, но&nbsp;вы&nbsp;можете связаться с&nbsp;нами самостоятельно не&nbsp;дожидаясь звонка.
+					+e.btn.btn.btn-secondary.d-none.d-lg-block(href='/') Вернуться на главную
+				+e.contact
+					+e.item
+						.icon-wrap: +icon('mail')
+						div
+							a.h5(href="mailto:info@zaborprof.ru") info@zaborprof.ru
+							span по любым вопросам 
+					+e.item
+						.icon-wrap: +icon('call2')
+						div
+							a.h5(href="tel:+74957411161") +7 (495) 741-11-61
+							span с 8:00 до 21:00 пн-пт
+					+e.item-sm
+						.h6 Мессенджеры
+						+soc
+					+e.btn.btn.btn-secondary.d-lg-none(href='/') Вернуться на главную
+	// end sThanks

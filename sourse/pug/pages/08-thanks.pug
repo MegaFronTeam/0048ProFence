@@ -1,0 +1,27 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sThanks/_sThanks.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= '02-card-service.jpg'
+
+block title
+	- let  title= 'Спасибо'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sThanks
+	+parts('footer')
+      
+
+
+
