@@ -5,7 +5,7 @@ mixin footer()
 				.row 
 					.col-lg-auto.oredr-1: +e.logo(href='/'): +img('img/svg/logo.svg')
 					.col-lg.order-3.order-lg-2: +mnu
-					.col-lg-auto.order-2.order-lg-3: +e.btn.btn.btn-sm.btn-secondary(href='#') Заказать звонок
+					.col-lg-auto.order-2.order-lg-3: +e.btn.btn.btn-sm.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html') Заказать звонок
 		+e.body
 			.container
 				+e.row.row

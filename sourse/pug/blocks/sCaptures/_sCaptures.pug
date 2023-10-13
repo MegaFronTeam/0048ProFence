@@ -7,7 +7,7 @@ mixin sCapturesItem(h, btn, ceb)
 		+e.bottom-row 
 			.row
 				.col-lg-auto
-					+e.btn.btn.btn-secondary(href="#")!= btn
+					+e.btn.btn.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html')!= btn
 				if ceb
 					.col-lg-auto.order-first.order-lg-last
 						+img('img/ceb.png').ceb

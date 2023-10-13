@@ -1,15 +1,28 @@
 
 <div class="modal-win">
-	<div class="form-wrap">
-		<form> 
-			<div class="form-wrap__title">Нужна помощь в&nbsp;выборе ASIC-майнера?
+	<div class="row">
+		<div class="modal-win__col col-md">
+			<div class="form-wrap">
+				<form> 
+					<div class="form-wrap__title h4">Заказать звонок
+					</div>
+					<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время!</p>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше имя"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваш телефон"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn btn-secondary w-100" type="submit">Отправить заявку
+					</button>
+					<div class="form-wrap__policy">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Я ознакомился с условиями обработки <a href="#">персональных данных</a></span>
+						</label>
+					</div>
+				</form>
 			</div>
-			<p class="after-headline">Оставьте свой телефон и&nbsp;мы&nbsp;перезвоним в&nbsp;ближайшее время</p>
-			<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Телефон" required="required"/> 
-			</div>
-			<!-- +e.input-wrap-->
-			<button class="form-wrap__btn btn btn-primary w-100" type="submit">Заказать звонок
-			</button>
-		</form>
+		</div>
+		<div class="col-md d-none d-lg-block"><img class="img" src="img/modal-bg.png" alt="" loading="lazy"/>
+		</div>
 	</div>
 </div>

@@ -27,7 +27,7 @@ mixin sContact()
 					+item-sm(`График работы`)
 						p Работаем без выходных с 8:00 до 20:00
 					+e.item-sm
-						+e.btn.btn.btn-outline-primary(data-src='#modal-call').btn-modal-js Заказать звонок
+						+e.btn.btn.btn-outline-primary(data-fancybox data-type="ajax" href='modal/call.html') Заказать звонок
 					+e.item-sm
 						+downloadRequisites('Карточка организации')
 
