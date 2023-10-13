@@ -26,3 +26,30 @@ mixin headerBlock()
 							.icon-wrap: +icon('chevron-down')
 							| Листайте вниз
 	// end headerBlock
+
+mixin headerBlock2()
+	// start headerBlock
+	+b.headerBlock--2.section#headerBlock&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-6.order-lg-last
+					+e.wrap
+						+e.date 12 июня 2023
+						h1 Преимущества готовых ограждений от&nbsp;ЗаборПроф
+						p Осуществляем бесплатную бережную доставку в&nbsp;любой день недели при заказе
+						.row
+							.col-auto
+								+soc
+									+item-sos()(style='--bgColor:#4680C2;')
+										+icon('vk')
+									+item-sos()(style='--bgColor:#49CB5B;')
+										+icon('whatsapp2')
+									+item-sos()(style='--bgColor:#009FE3;')
+										+icon('telegram2')
+							.col-auto.ms-lg-auto.d-none.d-lg-block
+								+e.scroll(href='#sContent')
+									.icon-wrap: +icon('chevron-down')
+									| Листайте вниз
+				.col-lg-6
+					+e.img-wrap: img(src='img/headerblock-bg-1.jpg').object-fit-js
+	// end headerBlock

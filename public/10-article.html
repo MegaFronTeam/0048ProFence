@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Спасибо</title>
+		<title>Блог</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
@@ -26,65 +26,86 @@
 			}
 		</script>
 	</head>
-	<body data-bg="02-card-service.jpg">
+	<body class="article-page" data-bg="02-card-service.jpg">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<!-- start sThanks-->
-				<section class="sThanks section" id="sThanks">
+				<div class="page-head mb-0">
 					<div class="container">
-						<div class="sThanks__wrap">
-							<div class="sThanks__content">
-								<h1><span>Спасибо </span> за ваше обращение!</h1>
-								<p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, но&nbsp;вы&nbsp;можете связаться с&nbsp;нами самостоятельно не&nbsp;дожидаясь звонка.</p>
-								<a class="sThanks__btn btn btn-secondary d-none d-lg-block" href="/">Вернуться на главную
-								</a>
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Блог</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Преимущества готовых ограждений от ЗаборПроф</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- start headerBlock-->
+				<div class="headerBlock headerBlock--2 section" id="headerBlock">
+					<div class="container">
+						<div class="headerBlock__row row">
+							<div class="headerBlock__col col-lg-6 order-lg-last">
+								<div class="headerBlock__wrap">
+									<div class="headerBlock__date">12 июня 2023
+									</div>
+									<h1>Преимущества готовых ограждений от&nbsp;ЗаборПроф</h1>
+									<p>Осуществляем бесплатную бережную доставку в&nbsp;любой день недели при заказе</p>
+									<div class="row">
+										<div class="col-auto">
+											<div class="soc">
+												<a class="soc__item" href="#" target="_blank" style="--bgColor:#4680C2;">
+													<svg class="icon icon-vk ">
+														<use xlink:href="img/svg/sprite.svg#vk"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank" style="--bgColor:#49CB5B;">
+													<svg class="icon icon-whatsapp2 ">
+														<use xlink:href="img/svg/sprite.svg#whatsapp2"></use>
+													</svg>
+												</a>
+												<a class="soc__item" href="#" target="_blank" style="--bgColor:#009FE3;">
+													<svg class="icon icon-telegram2 ">
+														<use xlink:href="img/svg/sprite.svg#telegram2"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="col-auto ms-lg-auto d-none d-lg-block">
+											<a class="headerBlock__scroll" href="#sContent">
+												<div class="icon-wrap">
+													<svg class="icon icon-chevron-down ">
+														<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+													</svg>
+												</div>Листайте вниз
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="sThanks__contact">
-								<div class="sThanks__item">
-									<div class="icon-wrap">
-										<svg class="icon icon-mail ">
-											<use xlink:href="img/svg/sprite.svg#mail"></use>
-										</svg>
-									</div>
-									<div><a class="h5" href="mailto:info@zaborprof.ru">info@zaborprof.ru</a><span>по любым вопросам </span></div>
+							<div class="col-lg-6">
+								<div class="headerBlock__img-wrap"><img class="object-fit-js" src="img/headerblock-bg-1.jpg"/>
 								</div>
-								<div class="sThanks__item">
-									<div class="icon-wrap">
-										<svg class="icon icon-call2 ">
-											<use xlink:href="img/svg/sprite.svg#call2"></use>
-										</svg>
-									</div>
-									<div><a class="h5" href="tel:+74957411161">+7 (495) 741-11-61</a><span>с 8:00 до 21:00 пн-пт</span></div>
-								</div>
-								<div class="sThanks__item-sm">
-									<div class="h6">Мессенджеры</div>
-									<div class="soc">
-										<a class="soc__item" href="#" target="_blank">
-											<svg class="iconC iconC-telegram ">
-												<use xlink:href="img/svg/spriteC.svg#telegram"></use>
-											</svg>
-										</a>
-										<a class="soc__item" href="#" target="_blank">
-											<svg class="iconC iconC-viber ">
-												<use xlink:href="img/svg/spriteC.svg#viber"></use>
-											</svg>
-										</a>
-										<a class="soc__item" href="#" target="_blank">
-											<svg class="iconC iconC-whatsapp ">
-												<use xlink:href="img/svg/spriteC.svg#whatsapp"></use>
-											</svg>
-										</a>
-									</div>
-								</div>
-								<a class="sThanks__btn btn btn-secondary d-lg-none" href="/">Вернуться на главную
-								</a>
 							</div>
 						</div>
 					</div>
+				</div>
+				<!-- end headerBlock-->
+				<!-- start sContent-->
+				<section class="sContent section" id="sContent">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sContent</h2>
+						</div>
+						<div class="sContent__row row">
+						</div>
+					</div>
 				</section>
-				<!-- end sThanks-->
+				<!-- end sContent-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>

@@ -7,11 +7,11 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sThanks/_sThanks.pug
 
 block variables
-	- let  mainPage= '' 
+	- let  mainPage= 'article-page' 
 	- let  bg= '02-card-service.jpg'
 
 block title
-	- let  title= 'Спасибо'
+	- let  title= 'Блог'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -19,7 +19,9 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+sThanks
+		+page-head('', '', '', 'Блог', 'Преимущества готовых ограждений от ЗаборПроф').mb-0
+		+headerBlock2()
+		+sContent()
 	+parts('footer')
       
 

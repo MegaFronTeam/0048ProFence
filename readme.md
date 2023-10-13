@@ -9,4 +9,4 @@
 7. <https://megafronteam.github.io/0048ProFence/public/404.html>
 8. <https://megafronteam.github.io/0048ProFence/public/08-thanks.html>
 9. <https://megafronteam.github.io/0048ProFence/public/09-blog.html>
-10. 
+10. <https://megafronteam.github.io/0048ProFence/public/10-article.html>
