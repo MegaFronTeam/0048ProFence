@@ -11,7 +11,7 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 		justify-content: center;
 		@include media-breakpoint-up(lg) {
-			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
+			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.1);
 		}
 	}
 	.section-title{
@@ -51,7 +51,7 @@
 			}
 			.row {
 				align-items: center;
-				margin-top: auto;
+				// margin-top: auto;
 			}
 			.h6 {
 				display: block;
@@ -67,6 +67,9 @@
 			--bs-btn-padding-x: #{rem(18)};
 			--bs-btn-font-weight: 600;
 			--bs-border-width: 2px;
+			@include media-breakpoint-up(xl) {
+				--bs-btn-padding-x: 2.385714rem;
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

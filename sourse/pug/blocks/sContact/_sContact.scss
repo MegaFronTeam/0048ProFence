@@ -1,10 +1,13 @@
 // start .sContact
 .sContact {
-	--sPT: #{rem(36)};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	// --sPT: #{rem(36)};
+	--sPB: #{rem(36)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(96)};
+		--sPT: #{rem(0)};
+		--sPB: #{rem(96)};
+		// --sPT: #{rem(96)};
 	}
 	&__row {
 		&--top {
@@ -85,7 +88,7 @@
 		@include media-breakpoint-up(md) {
 			line-height: 1.25;
 			font-size: rem(16);
-			margin-bottom: rem(24);
+			margin-bottom: rem(29.600);
 		}
 		&:last-child {
 			margin-bottom: 0;
@@ -100,6 +103,7 @@
 		p {
 			margin-bottom: 0;
 			line-height: 1.4;
+			font-size: rem(14);
 		}
 	}
 	&__btn {

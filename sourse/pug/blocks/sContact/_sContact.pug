@@ -6,15 +6,15 @@ mixin sContact()
 				.col-lg-6
 					h1 Контактная информация
 					+e.item
-						.icon-wrap: +icon('mail')
-						div
-							a.h5(href="mailto:info@zaborprof.ru") info@zaborprof.ru
-							span по любым вопросам 
-					+e.item
 						.icon-wrap: +icon('call2')
 						div
 							a.h5(href="tel:+74957411161") +7 (495) 741-11-61
 							span с 8:00 до 21:00 пн-пт
+					+e.item
+						.icon-wrap: +icon('mail')
+						div
+							a.h5(href="mailto:info@zaborprof.ru") info@zaborprof.ru
+							span по любым вопросам 
 					mixin item-sm(h)
 						+e.item-sm
 							.h6!= h

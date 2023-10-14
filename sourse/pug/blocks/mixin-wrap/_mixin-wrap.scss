@@ -184,10 +184,13 @@
 		}
 		h1 {
 			max-width: rem(840);
-			margin-bottom: 0;
+			// margin-bottom: 0;
 			text-align: center;
 			color: #fff;
 		}
+	}
+	h1 {
+		margin-bottom: 0;
 	}
 	&--description {
 		.page-head__img-wrap {
@@ -473,6 +476,9 @@
 	}
 	&__link {
 		position: relative;
+		@include media-breakpoint-up(xl) {
+			min-height: rem(294);
+		}
 	}
 	&__btn {
 		position: relative;	
@@ -481,10 +487,13 @@
 	&__date {
 		color: $gray-600;
 	}
+	&__row {
+		margin-top: auto;
+	}
 	.h6 {
 		@include mt;
 		font-size: rem(14);
-		line-height: 1.2;
+		line-height: 1.4;
 		margin-bottom: rem(4.546);
 		display: block;
 		&:before {

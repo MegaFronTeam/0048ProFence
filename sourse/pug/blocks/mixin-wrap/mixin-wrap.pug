@@ -106,13 +106,14 @@ mixin categoryItem(img, title, price, date, btn)
 			a.h6(href='#')!= title
 			p!= price
 			if date && btn
-				.row
-					.col-auto
-						+e.btn.btn.btn-outline-primary(href='#') Подробнее
-					.col-auto
-						+e.date!= date
+				+e.row
+					.row
+						.col-auto
+							+e.btn.btn.btn-outline-primary(href='#') Подробнее
+						.col-auto
+							+e.date!= date
 
-mixin customTable(head)
+mixin customTable(head, head2, head3)
 	+b.custom-table-wrap&attributes(attributes)
 		//- +e.table-head!= head
 		mixin tr(key, val, ...items)
@@ -128,16 +129,21 @@ mixin customTable(head)
 				tr
 					if head
 						th.custom-table-wrap__table-head(colspan=2)!= head
-					else
-						block!= th
+					else if head2
+						th Высота погонного метра
+						th Толщина листа 0.35/0.4/0.5 мм
+					else if head3
+						th Высота погонного метра
+						th Толщина листа 0.35/0.4/0.5 мм
+						th Толщина листа 0.35/0.4/0.5 мм
 			block
 
 
 mixin btnSpinner()
 	+b.SPAN.btnSpinner()
-		button.plus-js(type="button")
+		span.plus-js
 			+icon('chevron-up')
-		button.minus-js(type="button")
+		span.minus-js
 			+icon('chevron-down')
 
 mixin inputNumber(label, placeholder)

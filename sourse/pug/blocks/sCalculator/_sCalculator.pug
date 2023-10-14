@@ -16,7 +16,7 @@ mixin sCalculator(data)
 							.col-lg-6
 								+input('Забор из профнастила', 'select', 'Тип забора')
 							.col-lg-6
-								+input('Количество метров', 'number', 'Количество метров')
+								+input('Количество метров', 'number', 'Количество метров', 'numeric')
 							.col-lg-6
 								+input('1.5', 'select', 'Высота, м')
 							.col-lg-6
@@ -48,7 +48,7 @@ mixin sCalculator(data)
 						+e.send-feendback
 							.row
 								.col-12
-									+e.title.h5 Получить консультацию
+									+e.title.h5 Получить расчет ограждения
 									p Оставьте заявку и мы свяжемся с Вами в ближайшее время!
 								.col-12
 									+input('Введите имя', 'text', 'Ваше имя')

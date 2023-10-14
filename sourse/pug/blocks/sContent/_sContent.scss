@@ -65,7 +65,7 @@
 	h2,h3,h4,h5,h6 {
 		margin-bottom: rem(18);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(24);
+			margin-bottom: rem(25.400);
 		}
 	}
 	p {
@@ -119,7 +119,7 @@
 			background: $gray-100;
 			padding: rem(18);
 			@include media-breakpoint-up(lg) {
-				padding: rem(37) rem(36);
+				padding: rem(34.200) rem(36);
 			}
 			p {
 				margin-bottom: 0;
@@ -135,7 +135,7 @@
 			margin-bottom: rem(12);
 			line-height: 1.4;
 			@include media-breakpoint-up(lg) {
-				margin-bottom: rem(18);
+				margin-bottom: rem(9.600);
 			}
 		}
 		&__policy {
