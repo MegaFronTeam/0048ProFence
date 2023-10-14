@@ -200,6 +200,15 @@ function eventHandler() {
 			},
 		},
   });
+
+	document.addEventListener('click', (event) => {
+		let clearInputBtnTarget = event.target.closest('.btn-close-js');
+		if(clearInputBtnTarget) {
+			$('.btn-close-js').parent().find('.input-search').val("");
+			$('.btn-close-js').parent().find('.input-search').focus();
+		}
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

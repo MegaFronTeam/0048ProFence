@@ -44,7 +44,7 @@ mixin top-nav()
 									| Калькулятор
 								+mnu(true)
 								+e.inner-wrap.d-lg-none
-									+e.city(href='#')
+									+e.city(data-fancybox data-type="ajax" href='modal/city.html')
 										| Ваш город: 
 										span Москва
 										+icon('chevron-down')

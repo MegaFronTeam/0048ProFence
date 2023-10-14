@@ -4,7 +4,7 @@ mixin topLine()
 		.container
 			+e.row.row
 				.col
-					+e.city(href='#')
+					+e.city(data-fancybox data-type="ajax" href='modal/city.html')
 						| Ваш город: 
 						span Москва
 						+icon('chevron-down')
