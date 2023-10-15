@@ -6,6 +6,9 @@
 	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(96)};
 	}
+	&__row {
+		--bs-gutter-y: #{rem(36)};
+	}
 	.h3 {
 		margin-bottom: rem(6);
 		@include media-breakpoint-up(lg) {

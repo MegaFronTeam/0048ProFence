@@ -10,14 +10,14 @@ mixin sWhy(data)
 						+img(`img/svg/${icon}`)
 						.h6!= title
 						p!= text
-				.col-lg-3
+				+e.col.col-lg-3
 					+item('sWhy-icon-1.svg', 'Бесплатная доставка', 'Бережная своевременная доставка в&nbsp;любой день недели')
 					+item('sWhy-icon-3.svg', 'Бесплатный замер', 'При заключении договора замер бесплатно')
 				+e.img-col.col-lg-6.d-none.d-lg-flex: +img('img/sWhy-img-1.png').res-i
-				.col-lg-3
+				+e.col.col-lg-3
 					+item('sWhy-icon-2.svg', 'Соблюдение сроков', 'Соблюдаем сроки сдачи проектов и&nbsp;несем финансовую ответственность за&nbsp;каждый день просрочки')
 					+item('sWhy-icon-4.svg', 'Гарантия на работу', 'Мы&nbsp;предоставляем гарантию качества выполненных работ. Мы&nbsp;исправим любые недочеты бесплатно в&nbsp;течение 2&nbsp;лет')
 				.col-lg-3.ms-auto.me-auto 
 					+item('sWhy-icon-5.svg', 'Гарантия низкой цены', 'Предоставляем эксклюзиивные цены от&nbsp;производителей')
-			+e.btn.btn.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html') Отправить заявку
+			+e.btn.btn.btn-secondary(data-fancybox="modal" data-type="ajax" href='modal/call.html') Отправить заявку
 	// end sWhy

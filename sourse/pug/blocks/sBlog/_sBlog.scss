@@ -49,6 +49,9 @@
 			@include media-breakpoint-up(lg) {
 				padding: rem(36);
 			}
+			@include media-breakpoint-up(xl) {
+				min-height: rem(294);
+			}
 			.row {
 				align-items: center;
 				// margin-top: auto;

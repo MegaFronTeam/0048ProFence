@@ -4,12 +4,12 @@ mixin topLine()
 		.container
 			+e.row.row
 				.col
-					+e.city(data-fancybox data-type="ajax" href='modal/city.html')
+					+e.city(data-fancybox="modal" data-type="ajax" href='modal/city.html')
 						| Ваш город: 
 						span Москва
 						+icon('chevron-down')
 				.col-auto: +e.email(href='mailto:info@zaborprof.ru') info@zaborprof.ru
 				.col-auto: +soc
 				.col-auto: +e.tel(href='tel:+74957411161') +7 (495) 741-11-61
-				.col-auto: +e.btn(data-fancybox data-type="ajax" href='modal/call.html') Заказать звонок
+				.col-auto: +e.btn(data-fancybox="modal" data-type="ajax" href='modal/call.html') Заказать звонок
 	// end topLine

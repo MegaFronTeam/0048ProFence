@@ -46,6 +46,10 @@
       width: calc(100% - var(--bs-gutter-x));
       margin-bottom: 0;
       transform: translateY(-50%);
+      img {
+        width: 100%;
+        max-width: rem(624);
+      }
     }
     @include media-breakpoint-up(xl) {
     }

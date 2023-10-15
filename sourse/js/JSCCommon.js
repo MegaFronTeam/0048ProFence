@@ -9,8 +9,8 @@ class JSCCommon {
 		Fancybox.bind('[data-fancybox]', {
 			autoFocus: false,
 			placeFocusBack: false,
-			groupAll: false,
-			groupAttr: false,
+			// groupAll: false,
+			// groupAttr: false,
 		});
 		Fancybox.bind(link, {
 			arrows: false,

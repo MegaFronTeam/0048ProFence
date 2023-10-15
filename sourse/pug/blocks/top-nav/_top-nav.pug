@@ -44,14 +44,14 @@ mixin top-nav()
 									| Калькулятор
 								+mnu(true)
 								+e.inner-wrap.d-lg-none
-									+e.city(data-fancybox data-type="ajax" href='modal/city.html')
+									+e.city(data-fancybox="modal" data-type="ajax" href='modal/city.html')
 										| Ваш город: 
 										span Москва
 										+icon('chevron-down')
 									+e.address(href='#') 125481, г. Москва, ул. Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
 									+e.work Работаем без выходных с 8:00 до 20:00
 									+e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
-									+e.inner-btn.btn.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html') Заказать звонок
+									+e.inner-btn.btn.btn-secondary(data-fancybox="modal" data-type="ajax" href='modal/call.html') Заказать звонок
 					.col-auto.d-none.d-lg-block
 						+e.btn.btn.btn-primary(href='#')
 							+icon('wallet')

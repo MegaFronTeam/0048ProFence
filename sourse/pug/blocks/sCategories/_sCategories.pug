@@ -17,7 +17,7 @@ mixin sCategories(data)
 									p от 1690 ₽/м.п
 								.col-auto.ms-auto
 									if btn
-										+e.btn.btn.btn-sm.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html') Вызвать замерщика
+										+e.btn.btn.btn-sm.btn-secondary(data-fancybox="modal" data-type="ajax" href='modal/call.html') Вызвать замерщика
 									else
 										+e.btn.btn.btn-sm.btn-secondary(href='#'): +icon('chevron-right')
 						ul

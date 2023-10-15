@@ -1,4 +1,4 @@
-mixin sAbout(i, h, btn)
+mixin sAbout(i, h, btn, format='jpg')
 	// start sAbout
 	+b.SECTION.sAbout.section&attributes(attributes)
 		.container
@@ -8,7 +8,7 @@ mixin sAbout(i, h, btn)
 						h2!= h
 						+e.img-wrap
 							.img-wrap-center
-								+img(`img/sAbout-${i}.jpg`, 'bg')
+								+img(`img/sAbout-${i}.${format}`, 'bg')
 						if block
 							block
 						else

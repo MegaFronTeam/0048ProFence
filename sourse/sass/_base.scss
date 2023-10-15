@@ -24,7 +24,7 @@ html{
 }
 
 body {
-	letter-spacing: rem(0.6); // Может быть надо будет убрать, так все становиться под пиксель перфект
+	// letter-spacing: rem(0.6); // Может быть надо будет убрать, так все становиться под пиксель перфект
 	&[class*="fixed"],
 	&.fancybox-active{
 		.header{ 
@@ -111,6 +111,10 @@ body {
 }
 main{
 	flex-grow: 1;
+	padding-top: rem(61.56);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(128);
+	}
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;
@@ -142,6 +146,7 @@ main{
 	}
 	span {
 		color: $primary;
+		display: inline-block;
 	}
 	p {
 		margin-bottom: 0;

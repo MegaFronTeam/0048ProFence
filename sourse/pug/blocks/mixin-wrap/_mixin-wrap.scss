@@ -476,9 +476,6 @@
 	}
 	&__link {
 		position: relative;
-		@include media-breakpoint-up(xl) {
-			min-height: rem(294);
-		}
 	}
 	&__btn {
 		position: relative;	
@@ -793,10 +790,10 @@
   &__content {
     border-left: 1px solid $gray-300;
     // padding: rem(7) 0;
-    display: none;
+    // display: none;
     @include media-breakpoint-up(lg) {
       margin-top: 0;
-      display: block;
+      // display: block;
     }
   }
   &__item {

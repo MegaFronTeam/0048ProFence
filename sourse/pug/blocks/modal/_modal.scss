@@ -29,15 +29,31 @@
 	--f-button-bg: #{$gray-300};
 	--f-button-svg-width: #{rem(20)};
 	--f-button-svg-height: #{rem(20)};
-	--f-button-active-bg: rgba(0, 0, 0, 0.6);
-	--f-button-hover-bg: rgba(0, 0, 0, 0.6);
+	--f-button-active-bg: #{$secondary};
+	--f-button-active-color: #fff;
+	--f-button-hover-bg: #fff;
+	--f-button-hover-color: #{$gray-600};
 	top: 12px;
 	right: 12px;
+	&:active {
+		svg {
+			color: #fff;
+		}
+	}
 }
 
 .is-compact .fancybox__content>.f-button.is-close-btn {
 	--f-button-color: #{$gray-600};
 	--f-button-bg: #{$gray-300};
+	--f-button-active-bg: #{$secondary};
+	--f-button-active-color: #fff;
+	--f-button-hover-bg: #fff;
+	--f-button-hover-color: #{$gray-600};
+	&:active {
+		svg {
+			color: #fff;
+		}
+	}
 }
 
 .modal-win {

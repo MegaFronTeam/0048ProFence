@@ -26,7 +26,7 @@ mixin sGallery2(title="<span>Фотогалерея </span> наших огра�
 				+e.slide.swiper-slide
 					+e.item(href=`img/sGallery-lg-${img}.jpg` data-fancybox="sGallery").btn-modal-js
 						+img(`img/sGallery-${img}.jpg`, 'bg')
-			.def-slider-js
+			.gallery-slider-js
 				+e.slider.swiper
 					.swiper-wrapper
 						- for (var x = 1; x < 10; x++)

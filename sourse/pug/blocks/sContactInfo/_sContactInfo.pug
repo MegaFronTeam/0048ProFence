@@ -36,7 +36,7 @@ mixin sContactInfo(data)
 						ymaps.ready(init);
 						function init() {
 							var myMap = new ymaps.Map("map", {
-									center: [55.856020244218115,37.43367994572443],
+									center: [55.85732369729193,37.43951643254084],
 									zoom: 15
 							}, {
 									searchControlProvider: 'yandex#search'
@@ -57,5 +57,5 @@ mixin sContactInfo(data)
 				.col-md
 					p.mb-0 Россия, Москва, улица Фомичёвой, 16к3
 				.col-md-auto 
-					+downloadRequisites
+					+downloadRequisites('Карточка организации')
 	// end sContactInfo

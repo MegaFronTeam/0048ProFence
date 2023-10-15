@@ -8,7 +8,7 @@ mixin headerBlock()
 						h1 Изготовление и&nbsp;установка ограждений под ключ 
 							span в&nbsp;Москве и&nbsp;Московской области
 						p Осуществляем бесплатную бережную доставку в&nbsp;любой день недели при заказе
-						+e.btn.btn.btn-secondary(data-fancybox data-type="ajax" href='modal/call.html') Вызвать замерщика
+						+e.btn.btn.btn-secondary(data-fancybox="modal" data-type="ajax" href='modal/call.html') Вызвать замерщика
 				.col-lg-6
 					+e.img-wrap: img(src='img/headerblock-bg-1.jpg' alt='').object-fit-js
 		+e.advantages
@@ -51,5 +51,5 @@ mixin headerBlock2()
 									.icon-wrap: +icon('chevron-down')
 									| Листайте вниз
 				.col-lg-6
-					+e.img-wrap: img(src='img/headerblock-bg-1.jpg' alt='').object-fit-js
+					+e.img-wrap: img(src='img/headerblock-bg-2.jpg' alt='').object-fit-js
 	// end headerBlock
